@@ -23,7 +23,8 @@ class LibraryDatabase
         // $this->dbname="librarydatabase";//Tanzir
         // $this->password="admin";//Tiwa
         // $this->dbname="libdatabase";//Tiwa
-        
+        // $this->password="admin";//aaditya 
+		// $this->dbname="librarydb"; //aaditya
 
 
         try {
