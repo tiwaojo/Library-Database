@@ -1,5 +1,5 @@
 <?php
-// Start point of our project
+include_once 'config\Database.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,5 +11,9 @@
 </head>
 <body>
     <h1>Library Database</h1>
+    <?php
+    $object=new LibraryDatabase;
+    $object->connect();
+  ?>
 </body>
 </html>
