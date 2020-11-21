@@ -8,45 +8,50 @@ header("Access-Control-Allow-Orgin: *");
 header("Content-Type: application/json");
 
 
+// include_once('E:\wamp64\www\Library-Database\models\Members.php');
+// include_once('E:\wamp64\www\Library-Database\config\Database.php');
+include('../../models/Employees.php');
+include('../../config/Database.php');
+
 
 //instantiate and connect to DB
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-$member = new Members($db);
+$employee = new Employee($db);
 
 //blog post query
-$res = $member->read();
+$res = $employee->view1();
 
 //get row count
-$num = $res->rowCount();
+ $num=$res->rowCount();
 if ($num > 0) {
-    $member_arr = array();
-    $member_arr['data'] = array();
+    $employee_arr = array();
+    $employee_arr['data'] = array();
 
     while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
 
-        $member_item = array(
-            'Members_Id' => $Members_Id,
-            'M_FName' => $M_FName,
-            'M_LName' => $M_LName,
-            'M_BDate' => $M_BDate,
-            'M_Email' => $M_Email,
-            'M_Address' => $M_Address,
-            'M_Sex' => $M_Sex,
-            'M_Username' => $M_Username,
-            'M_Password' => $M_Password,
+        $employee_item = array(
+            'Employees_Id' => $Employees_Id,
+            'E_FName' => $E_FName,
+            'E_LName' => $E_LName,
+            // 'E_BDate' => $E_BDate,
+            // 'E_Email' => $E_Email,
+            // 'E_Address' => $M_Address,
+            // 'E_Sex' => $M_Sex,
+            // 'E_Username' => $M_Username,
+            // 'E_Password' => $M_Password,
         );
 
 // echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
 // echo $row["Members_Id"];
         //push data
-        array_push($member_arr['data'], $member_item);
+        array_push($employee_arr['data'], $employee_item);
     }
     //turn to json & output
-    echo json_encode($member_arr);
+    echo json_encode($employee_arr);
 } else {
     echo json_encode(
         array("message" => 'No posts Found')

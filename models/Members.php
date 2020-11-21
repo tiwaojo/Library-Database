@@ -40,19 +40,7 @@ class Members
         $stmt->execute();
 
         return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
     }
-
-    //constructor
-
-    // TODO Create queries to get data here
-  
-    // // constructor with $db as database connection
-    // public function __construct($db){
-    //     $this->conn = $db;
-    // }
+    
+    
 }
