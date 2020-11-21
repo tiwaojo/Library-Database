@@ -24,6 +24,41 @@
     
   ?>
     </table>
+
+    <body>
+    <h2>Display all books</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+        </tr>
+        <?php
+    // $object=new LibraryDatabase;
+    // $object->connect();  
+    
+    include 'LibDatabase/Books/readbooks.php';
+    
+  ?>
+   ?>
+    </table>
+
+    <body>
+    <h2>Display all genres</h2>
+    <table>
+        <tr>
+            <th>Genre ID</th>
+            <th>Genre Name</th>
+           
+        </tr>
+        <?php
+    // $object=new LibraryDatabase;
+    // $object->connect();  
+    
+    include 'LibDatabase/Genre/readgenre.php';
+    
+  ?>
 </body>
 
 </html>
