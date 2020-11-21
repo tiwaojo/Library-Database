@@ -8,8 +8,8 @@ header("Access-Control-Allow-Orgin: *");
 header("Content-Type: application/json");
 
 
-include_once '../../models/Members.php';
-include_once '../../config/Database.php';
+include_once '../models/Members.php';
+include_once '../config/Database.php';
 
 //instantiate and connect to DB
 $database = new LibraryDatabase();
@@ -43,13 +43,16 @@ if ($num > 0) {
             'M_Password' => $M_Password,
         );
 
+echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
+// echo $row["Members_Id"];
         //push data
-        array_push($member_arr['data'], $member_item);
+        // array_push($member_arr['data'], $member_item);
     }
     //turn to json & output
-    echo json_encode($member_arr);
+    // echo json_encode($member_arr);
 } else {
-    echo json_encode(
-        array("message" => 'No posts Found')
-    );
+    // echo json_encode(
+    //     array("message" => 'No posts Found')
+    // );
+    echo "<h1>There are 0 rows</h1>";
 }
