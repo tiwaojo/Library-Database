@@ -8,7 +8,7 @@ header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 
-include_once 'C:\wamp64\www\Library-Database/models/Members.php';
+include_once 'C:\wamp64\www\Library-Database/models/Books.php';
 include_once 'C:\wamp64\www\Library-Database/config/Database.php';
 
 
@@ -16,10 +16,10 @@ include_once 'C:\wamp64\www\Library-Database/config/Database.php';
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-$member = new Members($db);
+$book = new Books($db);
 
 //blog post query
-$res = $member->read();
+$res = $book->read();
 
 //get row count
 $num = $res->rowCount();
@@ -32,18 +32,16 @@ if ($num > 0) {
 
 
         $member_item = array(
-            'Members_Id' => $Members_Id,
-            'M_FName' => $M_FName,
-            'M_LName' => $M_LName,
-            'M_BDate' => $M_BDate,
-            'M_Email' => $M_Email,
-            'M_Address' => $M_Address,
-            'M_Sex' => $M_Sex,
-            'M_Username' => $M_Username,
-            'M_Password' => $M_Password,
+            'ISBN' => $ISBN,
+            'Book_Title' => $Book_Title,
+            'Publisher_Id' => $Publisher_Id,
+            'Genre_Id' => $Genre_Id,
+            'Library_Id' => $Library_Id,
+            'Author_Id' => $Author_Id,
+           
         );
 
-echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
+echo "<tr><td>".$ISBN."</td><td>".$Book_Title."</td><td>".$Author_Id."</td><td>".$Genre_Id."</td></tr>";
 // echo $row["Members_Id"];
         //push data
         // array_push($member_arr['data'], $member_item);

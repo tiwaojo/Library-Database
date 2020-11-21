@@ -8,7 +8,7 @@ header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 
-include_once 'C:\wamp64\www\Library-Database/models/Members.php';
+include_once 'C:\wamp64\www\Library-Database/models/Genre.php';
 include_once 'C:\wamp64\www\Library-Database/config/Database.php';
 
 
@@ -16,10 +16,10 @@ include_once 'C:\wamp64\www\Library-Database/config/Database.php';
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-$member = new Members($db);
+$genre = new Genre($db);
 
 //blog post query
-$res = $member->read();
+$res = $genre->read();
 
 //get row count
 $num = $res->rowCount();
@@ -32,18 +32,13 @@ if ($num > 0) {
 
 
         $member_item = array(
-            'Members_Id' => $Members_Id,
-            'M_FName' => $M_FName,
-            'M_LName' => $M_LName,
-            'M_BDate' => $M_BDate,
-            'M_Email' => $M_Email,
-            'M_Address' => $M_Address,
-            'M_Sex' => $M_Sex,
-            'M_Username' => $M_Username,
-            'M_Password' => $M_Password,
+            'Genre_Id' => $Genre_Id,
+            'Genre_Name' => $Genre_Name,
+          
+           
         );
 
-echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
+echo "<tr><td>".$Genre_Id."</td><td>".$Genre_Name."</td></tr>";
 // echo $row["Members_Id"];
         //push data
         // array_push($member_arr['data'], $member_item);
