@@ -30,7 +30,7 @@ class LibraryDatabase
         try {
             $pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "<h1>connected</h1>";
+            // echo "<h1>connected</h1>";
             return $pdo;
         } catch (\Exception $e) {
             echo "Connection failed: ".$e->getMessage();
