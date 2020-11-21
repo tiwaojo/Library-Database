@@ -1,7 +1,3 @@
-<?php
-include_once 'config\Database.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +9,7 @@ include_once 'config\Database.php';
 
 <body>
     <h1>Library Database</h1>
+    <h2>Display all members</h2>
     <table>
         <tr>
             <th>Id</th>
@@ -21,8 +18,10 @@ include_once 'config\Database.php';
         </tr>
         <?php
     // $object=new LibraryDatabase;
-    // $object->connect();
+    // $object->connect();  
+    
     include 'LibDatabase/Members/read.php';
+    
   ?>
     </table>
 </body>

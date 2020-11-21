@@ -5,11 +5,12 @@
 //Thois is to allow others to gain access to our api. i.e. only specific tokens(people) can access our api.
 //In this case the '*' gives everyone access t access to
 header("Access-Control-Allow-Orgin: *");
-header("Content-Type: application/json");
+// header("Content-Type: application/json");
 
 
-include_once '../models/Members.php';
-include_once '../config/Database.php';
+include_once 'models/Members.php';
+include_once 'config/Database.php';
+
 
 //instantiate and connect to DB
 $database = new LibraryDatabase();
@@ -22,7 +23,6 @@ $res = $member->read();
 
 //get row count
 $num = $res->rowCount();
-
 if ($num > 0) {
     $member_arr = array();
     $member_arr['data'] = array();
@@ -56,3 +56,5 @@ echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr
     // );
     echo "<h1>There are 0 rows</h1>";
 }
+
+?>
