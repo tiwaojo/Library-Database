@@ -1,16 +1,3 @@
-<<<<<<< Updated upstream
-=======
-
-<?php
-include_once 'config\Database.php';
-?>
-include('./config/Database.php');
-
-//instantiate and connect to DB
-$database = new LibraryDatabase();
-$db = $database->connect();
-?>
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,8 +40,8 @@ $db = $database->connect();
     include 'LibDatabase/Books/readbooks.php';
 
   ?>
-   ?>
-    </table>
+  </table>
+
     <h2>Display all genres</h2>
     <table>
         <tr>
@@ -69,50 +56,41 @@ $db = $database->connect();
     include 'LibDatabase/Genre/readgenre.php';
 
   ?>
+  </table>
+
+    <h2>Display all Libraries</h2>
     <table>
-        <tr>
+    <tr>
             <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <?php include 'LibDatabase/Members/read.php'; ?>
-        </tr>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Namee</th>
+            <th>Location</th>
             <?php include 'LibDatabase/Library/readLib.php'; ?>
         </tr>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
+  </table>
+
+  <h2>Display all Loaned Books</h2>
+    <table>
+    <tr>
+            <th>Loan Id</th>
+            <th>ISBN</th>
+            <th>Members ID</th>
+            <th>Date Loaned</th>
+            <th>Loan Status</th>
+            <th>Due Date</th>
             <?php include 'LibDatabase/Loaned_Book/LoanedRead.php'; ?>
         </tr>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+  </table>
+
+    <h2>Display all Publishers</h2>
+    <table>
+    <tr>
+            <th>Publisher Id</th>
+            <th>Publisher Name</th>
+            <th>Publisher Address</th>
             <?php include 'LibDatabase/Publisher/ReadPub.php'; ?>
         </tr>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <?php include 'LibDatabase/Genre/ReadGenre.php'; ?>
-        </tr>
-        <tr>
-          <th>Mem ID</th>
-          <?php
-          include
-           ?>
-        </tr>
-    </table>
+  </table>  
+        
 </body>
 
-<<<<<<< Updated upstream
 </html>
-=======
-</html>
->>>>>>> Stashed changes
