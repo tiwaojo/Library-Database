@@ -42,13 +42,13 @@ class Employee{
     {
         $this->table_name="employees at library 1";
 
-        $query = "SELECT * FROM 'employees at library 1'";
+        $query = "SELECT * FROM ".$this->table_name;
        
        $stmt = $this->conn->prepare($query);
-        // $stmt->execute();
+        $stmt->execute();
         // if ($stmt = $this->conn->prepare($query)) {
-            $stmt->execute();
-            $stmt->bind_result(3,$this->Employees_Id, $this->E_FName,$this->E_LName);
+            // $stmt->execute();
+            // $stmt->bind_result(3,$this->Employees_Id, $this->E_FName,$this->E_LName);
             // while ($stmt->fetch()) {
             //     printf("%s, %s\n", $this->Employees_Id, $this->E_FName, $this->E_LName);
             //     echo "<h1>".$this->Employees_Id."</h1>";
