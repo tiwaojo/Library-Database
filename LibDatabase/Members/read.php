@@ -5,7 +5,7 @@
 //Thois is to allow others to gain access to our api. i.e. only specific tokens(people) can access our api.
 //In this case the '*' gives everyone access t access to
 header("Access-Control-Allow-Orgin: *");
-header("Content-Type: application/json");
+// header("Content-Type: application/json");
 
 
 include_once 'C:\wamp64\www\Library-Database/models/Members.php';
@@ -42,18 +42,17 @@ if ($num > 0) {
             'M_Username' => $M_Username,
             'M_Password' => $M_Password,
         );
-
-// echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
+ echo "<tr><td>".$Members_Id."</td><td>".$M_FName."</td><td>".$M_LName."</td></tr>";
 // echo $row["Members_Id"];
         //push data
-        array_push($member_arr['data'], $member_item);
+       // array_push($member_arr['data'], $member_item);
     }
     //turn to json & output
-    echo json_encode($member_arr);
+    // echo json_encode($member_arr);
 } else {
-    echo json_encode(
-        array("message" => 'No posts Found')
-    );
+    // echo json_encode(
+    //     array("message" => 'No posts Found')
+    // );
     echo "<h1>There are 0 rows</h1>";
 }
 
