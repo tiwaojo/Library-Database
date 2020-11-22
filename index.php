@@ -18,14 +18,13 @@
         </tr>
         <?php
     // $object=new LibraryDatabase;
-    // $object->connect();  
-    
+    // $object->connect();
+
     include 'LibDatabase/Members/read.php';
-    
+
   ?>
     </table>
 
-    <body>
     <h2>Display all books</h2>
     <table>
         <tr>
@@ -36,29 +35,62 @@
         </tr>
         <?php
     // $object=new LibraryDatabase;
-    // $object->connect();  
-    
-    include 'LibDatabase/Books/readbooks.php';
-    
-  ?>
-   ?>
-    </table>
+    // $object->connect();
 
-    <body>
+    include 'LibDatabase/Books/readbooks.php';
+
+  ?>
+  </table>
+
     <h2>Display all genres</h2>
     <table>
         <tr>
             <th>Genre ID</th>
             <th>Genre Name</th>
-           
+
         </tr>
         <?php
     // $object=new LibraryDatabase;
-    // $object->connect();  
-    
+    // $object->connect();
+
     include 'LibDatabase/Genre/readgenre.php';
-    
+
   ?>
+  </table>
+
+    <h2>Display all Libraries</h2>
+    <table>
+    <tr>
+            <th>Id</th>
+            <th>Namee</th>
+            <th>Location</th>
+            <?php include 'LibDatabase/Library/readLib.php'; ?>
+        </tr>
+  </table>
+
+  <h2>Display all Loaned Books</h2>
+    <table>
+    <tr>
+            <th>Loan Id</th>
+            <th>ISBN</th>
+            <th>Members ID</th>
+            <th>Date Loaned</th>
+            <th>Loan Status</th>
+            <th>Due Date</th>
+            <?php include 'LibDatabase/Loaned_Book/LoanedRead.php'; ?>
+        </tr>
+  </table>
+
+    <h2>Display all Publishers</h2>
+    <table>
+    <tr>
+            <th>Publisher Id</th>
+            <th>Publisher Name</th>
+            <th>Publisher Address</th>
+            <?php include 'LibDatabase/Publisher/ReadPub.php'; ?>
+        </tr>
+  </table>  
+        
 </body>
 
 </html>

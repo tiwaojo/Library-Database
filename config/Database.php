@@ -22,8 +22,8 @@ class LibraryDatabase
         //$this->dbname="librarydatabase";//Tanzir
         // $this->password="admin";//Tiwa
         // $this->dbname="libdatabase";//Tiwa
-        //$this->password="admin";//aaditya
-        //$this->dbname="librarydb"; //aaditya
+        $this->password="admin";//aaditya
+        $this->dbname="librarydb"; //aaditya
         //$this->password="qwer1234";//Aryan
         //$this->dbname="librarydatabase"; //Aryan
 
