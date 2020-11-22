@@ -15,19 +15,23 @@ include('../config/Database.php');
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-$employee = new Employee($db);
-
+// $employee = new Employee($db);
+$query = "SELECT * FROM `employees at library 1`";
+       
+       $stmt = $db->prepare($query);
+        // $stmt->bindParam(1, $this->id);
+        $stmt->execute();
 
 //blog post query
-$res = $employee->view1();
+// $res = $employee->view1();
 
 //get row count
-$num = $res->rowCount();
+$num = $stmt->rowCount();
 if ($num > 0) {
     $employee_arr = array();
     $employee_arr['data'] = array();
 
-    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
 
@@ -55,27 +59,4 @@ if ($num > 0) {
     );
     echo "<h1>There are 0 rows</h1>";
 }
-// $res = $employee->view1();
-// $query = "SELECT * FROM ".$this->tablename;
-// // $stmt = $this->conn->prepare($query);
-// $r = mysqli_query($query,$db);
-// $row = mysqli_fetch_array($r);
-
-// while($row = mysqli_fetch_assoc($r)){
-
-//     echo "<tr><td>".$row["employees_Id"]."</td><td>".$row["M_FName"]."</td><td>".$row["M_LName"]."</td></tr>";
-// }
-
-// // Insert link to Database.php here so we can connect to our database without writing sam code again
-// $query = "SELECT * FROM database_inc.employees";
-
-
-// if ($stmt = $con->prepare($query)) {
-//     $stmt->execute();
-//     $stmt->bind_result($field1, $field2);
-//     while ($stmt->fetch()) {
-//         //printf("%s, %s\n", $field1, $field2);
-//     }
-//     $stmt->close();
-// }
 ?>
