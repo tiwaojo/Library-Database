@@ -42,5 +42,30 @@ class Members
         return $stmt;
     }
     
+    public function view4()
+    {
+        // $this->table_name="employees `at` library 1";
+
+        $query = "SELECT * FROM `view 4`";
+       
+       $stmt = $this->conn->prepare($query);
+        // $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+        // if ($stmt = $this->conn->prepare($query)) {
+            // $stmt->execute();
+            // $stmt->bind_result(3,$this->Employees_Id, $this->E_FName,$this->E_LName);
+            // while ($stmt->fetch()) {
+            //     printf("%s, %s\n", $this->Employees_Id, $this->E_FName, $this->E_LName);
+            //     echo "<h1>".$this->Employees_Id."</h1>";
+            //     echo "<h1>".$this->E_FName."</h1>";
+            //     echo "<h1>".$this->E_LName."</h1>";
+            // }
+        //     $stmt->close();
+        // }
+       
+
+        return $stmt;
+        // return $stmt;
+    }
     
 }
