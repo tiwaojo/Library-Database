@@ -40,11 +40,12 @@ class Employee{
 
     public function view1()
     {
-        $this->table_name="employees at library 1";
+        // $this->table_name="employees `at` library 1";
 
-        $query = "SELECT * FROM ".$this->table_name;
+        $query = "SELECT * FROM `employees at library 1`";
        
        $stmt = $this->conn->prepare($query);
+        // $stmt->bindParam(1, $this->id);
         $stmt->execute();
         // if ($stmt = $this->conn->prepare($query)) {
             // $stmt->execute();

@@ -1,5 +1,5 @@
 <?php
-class View5
+class View8
 {
 
     // database connection and table name
