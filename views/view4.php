@@ -8,8 +8,7 @@ header("Access-Control-Allow-Orgin: *");
 header("Content-Type: application/json");
 
 
-// include_once 'E:\wamp64\www\Library-Database\models\Members.php';
-// include_once 'E:\wamp64\www\Library-Database\config\Database.php';
+
 include('../models/Members.php');
 include('../config/Database.php');
 
