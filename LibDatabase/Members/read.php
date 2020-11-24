@@ -8,8 +8,8 @@ header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 
-include_once('../../models/Members.php');
-include_once('../../config/Database.php');
+include_once('models/Members.php');
+include_once('config/Database.php');
 
 
 //instantiate and connect to DB
