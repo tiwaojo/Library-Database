@@ -4,16 +4,16 @@
 //headers
 //Thois is to allow others to gain access to our api. i.e. only specific tokens(people) can access our api.
 //In this case the '*' gives everyone access t access to
-header("Access-Control-Allow-Orgin: *");
+// header("Access-Control-Allow-Orgin: *");
 //header("Content-Type: application/json");
 
 
-include('./models/Library.php');
-//include('./config/Database.php');
+include('models/Library.php');
+include('./config/Database.php');
 
 //instantiate and connect to DB
-//$database = new LibraryDatabase();
-//$db = $database->connect();
+$database = new LibraryDatabase();
+$db = $database->connect();
 
 $library = new Library($db);
 

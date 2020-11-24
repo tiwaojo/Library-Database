@@ -4,7 +4,7 @@
 //headers
 //Thois is to allow others to gain access to our api. i.e. only specific tokens(people) can access our api.
 //In this case the '*' gives everyone access t access to
-header("Access-Control-Allow-Orgin: *");
+// header("Access-Control-Allow-Orgin: *");
 //header("Content-Type: application/json");
 
 
