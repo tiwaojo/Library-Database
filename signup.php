@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99e70e69873e24ac64d39ab339dbab707ec77034
+>>>>>>> 53889f8fc1c814c41f41eefbd1c44ecb260dc897
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +35,7 @@
             </h3>
             <h5>Our Library Database contains a variety of content to explore</h5>
         </div>
+
     </div>
 
     <div class="right-rec">
@@ -81,6 +89,16 @@
             </form>
         </div>
     </div>
+
+        <div class="">
+            <p id="emailHelp" class="form-text text-muted">Already have an account? Log in <a href="signin.php">here</a>
+            </p>
+        </div>
+        <br>
+        <!-- create button for submitting the form -->
+        <button type="submit" class="btn"> Submit </button>
+    </form>
+
 </body>
 
 </html>
