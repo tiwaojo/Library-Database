@@ -19,7 +19,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<!-- <body>
 
     <h1>Library Database</h1>
     <h2>Display all members</h2>
@@ -106,6 +106,6 @@
         </tr>
   </table>  
         
-</body>
+</body> -->
 
 </html>
