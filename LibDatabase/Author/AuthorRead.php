@@ -16,7 +16,7 @@
  *
  */
 header("Access-Control-Allow-Orgin: *");
-include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
+include('./models/Author.php');
  class AuthorRead Extends Author
  {
    public function __construct($db)
@@ -73,7 +73,7 @@ include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
      //   // set properties
      //   $this->id = $row['id'];
      //   $this->name = $row['name'];
-     
+
 
 
 
