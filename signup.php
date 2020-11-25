@@ -114,13 +114,11 @@
                     </p>
                 </div>
                 <br>
-                
-            </form><!-- create button for submitting the form -->
-                <input type="submit" class="btn" value="Submit"> </input>
+                <!-- create button for submitting the form -->
+                <button type="submit" class="btn" value="Submit">Submit</button>
+            </form>
         </div>
     </div>
-
-
 </body>
 
 </html>
