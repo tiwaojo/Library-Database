@@ -15,8 +15,8 @@ header("Access-Control-Allow-Orgin: *");
 
 
 
-include_once '../models/Members.php';
-//include_once 'C:\wamp64\www\Library-Database/config/Database.php';
+include_once('./models/Members.php');
+include_once( './config/Database.php');
 
 class MemberRead extends Members
 {

@@ -19,7 +19,7 @@
   <body>
     <?php
 include('./config/Database.php');
-  include_once 'C:\wamp64\www\GitHub\Library-Database\LibDatabase\Author\AuthorRead.php';
+  include_once('LibDatabase\Author\AuthorRead.php');
 $database=new LibraryDatabase();
 $db = $database->connect();
 $author=new AuthorRead($db);
@@ -90,7 +90,7 @@ $author=new AuthorRead($db);
             $oldcol=$author->getAuthorColumn($id);
             $printcol=$author->printAuthorColumnTable($oldcol);
             echo "</table>";
-            include_once 'C:\wamp64\www\GitHub\Library-Database\LibDatabase\Author\AuthorUpdate.php';
+            include_once('LibDatabase/Author/AuthorUpdate.php');
             $authorUp=new AuthorUpdate($db);
             $authorCols=$authorUp->getFieldsPost($_POST);
 

@@ -20,8 +20,6 @@ include('../header.php');?>
         </tr>
      <?php
 
-
-
 include('../config/Database.php');
 
 

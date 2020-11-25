@@ -19,9 +19,7 @@ include('../header.php');?>
             <th>Email</th>
             <th>Username</th>
             <th>Password</th>
-        </tr>
-     
-
+        </tr>    
 <?php
 
 include('../models/Employees.php');
