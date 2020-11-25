@@ -107,4 +107,11 @@ nav .views{
 }
 .content-area table, tr, th, td {
 	border: 1px solid black;
+	height: 16px;
+  width: 50px;
+  color: #555D6C;
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
 }

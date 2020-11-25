@@ -20,8 +20,13 @@ class LibraryDatabase
         $this->user="root";
         // $this->password="tarzan114";//Tanzir
         //$this->dbname="librarydatabase";//Tanzir
+<<<<<<< HEAD
         $this->password="admin";//Tiwa
         $this->dbname="libdatabase";//Tiwa
+=======
+        // $this->password="admin";//Tiwa
+        // $this->dbname="libdatabase";//Tiwa
+>>>>>>> f77e626cc317dda6e3c03943e81276ec5fa0fcaf
         // $this->password="admin";//aaditya
         // $this->dbname="librarydb"; //aaditya
         //$this->password="qwer1234";//Aryan

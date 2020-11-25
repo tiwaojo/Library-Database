@@ -40,6 +40,21 @@ class Library
     //   $this->id = $row['id'];
     //   $this->name = $row['name'];
     }
+    public function readId($id){
+      //sql query to insert data
+      $query="SELECT * FROM ".$this->table_name." WHERE Library_Id = ".$id;
+
+      $stmt = $this->conn->prepare($query);
+
+      // Bind ID
+      // $stmt->bindParam(1, $this->id);
+
+      // Execute query
+      $stmt->execute();
+
+      return $stmt;
+
+    }
 
     //constructor
 
