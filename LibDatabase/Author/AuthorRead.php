@@ -26,18 +26,15 @@ include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
      // database connection and table name
      // private $conn;
      // private $table_name = "products";
-     public function printAuthorTable($response){
-
-     }
      public function printAuthorColumnTable($response){
        $num=$response->rowCount();
        if ($num > 0) {
-           $library_arr = array();
-           $library_arr['data'] = array();
+           $Author_arr = array();
+           $Author_arr['data'] = array();
 
            while ($row = $response->fetch(PDO::FETCH_ASSOC)) {
                extract($row);
-               $Library_item = array(
+               $Author_item = array(
                    'Author_Id' => $Author_Id,
                    'A_FName'=>$A_FName,
                    'A_LName'=>$A_LName,
@@ -68,6 +65,7 @@ include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
        $res=parent::readId($id);
        return $res;
      }
+   }
 
 
          //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +73,7 @@ include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
      //   // set properties
      //   $this->id = $row['id'];
      //   $this->name = $row['name'];
-     }
+     
 
 
 
