@@ -34,7 +34,7 @@
             <div>
                 <img class="group-people" src="Images\community.svg" alt="group" style="width:40%">
             </div>
-            
+
             <div class="centered-pos"><h1 class="acc-header " style="padding: 0;">
                 Login here
             </h1>
