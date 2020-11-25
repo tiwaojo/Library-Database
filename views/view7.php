@@ -36,8 +36,17 @@
             </div>
         </header>
 </div>
-    <div class = "Title">
-        <h2>View 2</h2>
+   
+<!-- This contains the methods for views -->
+<?php
+
+header("Access-Control-Allow-Orgin: *");
+// header("Content-Type: application/json");
+
+include('../header.php');?>
+
+<div class = "Title">
+        <h2>View 7</h2>
 </div>
 <div class= "content-area">
     <table>
@@ -51,13 +60,8 @@
             <th>Password</th>
         </tr>
      
-<!-- This contains the methods for views -->
+
 <?php
-
-header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-
 
 include('../models/Employees.php');
 include('../config/Database.php');

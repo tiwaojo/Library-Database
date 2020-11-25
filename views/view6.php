@@ -36,7 +36,15 @@
             </div>
         </header>
 </div>
-    <div class = "Title">
+    <!-- This contains the methods for views -->
+<?php
+
+header("Access-Control-Allow-Orgin: *");
+// header("Content-Type: application/json");
+
+include('../header.php');?>
+
+<div class = "Title">
         <h2>View 6 </h2>
 </div>
 <div class= "content-area">
@@ -47,13 +55,8 @@
             <th>Book</th>
             <th>Genre</th>
         </tr>
-     
+     <?php
 
-<!-- This contains the methods for views -->
-<?php
-
-header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
 
 
 include('../config/Database.php');

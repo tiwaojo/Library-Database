@@ -47,6 +47,7 @@ $M_Password=isset($_POST['password'])?$_POST['password']:die("Error: The data yo
   // Else not correct, a message will be displayed for the user to try again
   if (mysqli_num_rows($result) > 0) {
       echo "An account exists with these credentials";
+      header("Location: ../Library-Database/signup.php?error=invalidfields=".$M_Email);
   } else {
       $insert_query="INSERT INTO members (M_FName, M_LName, M_BDate, M_Email, M_Address, M_Sex, M_Username, M_Password, M_PNumber)
       VALUES (

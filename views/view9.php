@@ -36,7 +36,16 @@
             </div>
         </header>
 </div>
-    <div class = "Title">
+ 
+<!-- This contains the methods for views -->
+<?php
+
+header("Access-Control-Allow-Orgin: *");
+// header("Content-Type: application/json");
+
+include('../header.php');?>
+
+<div class = "Title">
         <h2>View 9</h2>
 </div>
 <div class= "content-area">
@@ -48,13 +57,8 @@
             <th>Email</th>
         </tr>
      
-<!-- This contains the methods for views -->
+
 <?php
-
-header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-
 // include_once('E:\wamp64\www\Library-Database\models\member\s.php');
 // include_once('E:\wamp64\www\Library-Database\config\Database.php');
 include('../models/Members.php');
