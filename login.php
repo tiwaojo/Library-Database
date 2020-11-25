@@ -1,4 +1,4 @@
-<?php 
+<?php
 header('Access-Control-Allow-Origin: *');
 //   header('Content-Type: application/json');
   header('Access-Control-Allow-Methods: POST');
@@ -30,7 +30,7 @@ $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND
   // Else not correct, a message will be displayed for the user to try again
   if (mysqli_num_rows($result) == 1) {
     //   echo "An account exists with these credentials";
-      header("location: ../Library-Database/index.php");
+      header("location: ../Library-Database/member_search.php");
   }else{
     header("Location: ../signup.php?error=invalidfields=".$M_Email);
   }
