@@ -54,8 +54,8 @@
                         </p>
                     </div>
                     <br>
-                    
-                </form><input type="submit" class="btn" value="Submit"></input>
+                    <button type="submit" class="btn" value="Submit">Submit</button>
+                </form>
             </div>
         </div>
     </body>

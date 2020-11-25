@@ -5,15 +5,6 @@ header('Access-Control-Allow-Origin: *');
 //   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization,X-Requested-With');
 
 
-// include('models/Members.php');
-// include('config/Database.php');
-
-
-//instantiate and connect to DB
-// $database = new LibraryDatabase();
-// $db = $database->connect();
-
-// $member = new Members($db);
 
 $mysqli=new mysqli("localhost", "root", "admin", "libdatabase");
 
@@ -34,16 +25,10 @@ $M_Password=isset($_POST['password'])?$_POST['password']:die("Error: The data yo
 
 //if password field is empty fill the email field again and remove the password
 $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND M_Password='".$M_Password."' LIMIT 1");
-// echo $result;
-  // If the input from the user matches the data collected from the database access is granted to the user and a welcome page and users images are displayed.
-  // Else not correct, a message will be displayed for the user to try again
-  if (mysqli_num_rows($result) > 0) {
-
-  }
 
   // If the input from the user matches the data collected from the database access is granted to the user and a welcome page and users images are displayed.
   // Else not correct, a message will be displayed for the user to try again
-  if (mysqli_num_rows($result) > 0) {
+  if (mysqli_num_rows($result) == 1) {
     //   echo "An account exists with these credentials";
       header("location: ../Library-Database/index.php");
   }else{
