@@ -9,44 +9,111 @@
 
 
 include('models/Library.php');
-include('./config/Database.php');
+class LibraryRead extends Library
+{
 
-//instantiate and connect to DB
-$database = new LibraryDatabase();
-$db = $database->connect();
+  function __construct($db)
+  {
+    // code...
+     parent::__construct($db);
+  }
+  public function getLibraryTable(){
+    $res=parent::read();
+    return $res;
+  }
+  public function getLibraryColumn($id){
+    $res=parent::readId($id);
+    return $res;
+  }
+  public function printLibraryColumnTable($response)
+  {
+    // code...
+    $num=$response->rowCount();
+    if ($num > 0) {
+        $Library_arr = array();
+        $Library_arr['data'] = array();
 
-$library = new Library($db);
+        while ($row = $response->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+            $Library_item = array(
+                'Library_Id' => $Library_Id,
+                'Library_Name'=>$Library_Name,
+                'Library_Address'=>$Library_Address
+            );
 
-//blog post query
-$res = $library->read();
-
-//get row count
-$num = $res->rowCount();
-
-if ($num > 0) {
-    $library_arr = array();
-    $library_arr['data'] = array();
-
-    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
-        extract($row);
-
-
-        $Library_item = array(
-            'Library_Id' => $Library_Id,
-            'Library_Name'=>$Library_Name,
-            '$Library_Address'=>$Library_Address
-        );
-
-echo "<tr><td>".$Library_Id."</td><td>".$Library_Name."</td><td>".$Library_Address."</td></tr>";
-// echo $row["librarys_Id"];
-        //push data
-        // array_push($library_arr['data'], $library_item);
+    print "<tr><td>".$Library_Id."</td><td>".$Library_Name."</td><td>".$Library_Address."</td></tr>";
+    return $row;
+    // echo $row["librarys_Id"];
+            //push data
+            // array_push($library_arr['data'], $library_item);
+        }
+        //turn to json & output
+        // echo json_encode($library_arr);
+    } else {
+        // echo json_encode(
+        //     array("message" => 'No posts Found')
+        // );
+        print "<h1>There are 0 rows</h1>";
     }
-    //turn to json & output
-    // echo json_encode($library_arr);
-} else {
-    // echo json_encode(
-    //     array("message" => 'No posts Found')
-    // );
-    echo "<h1>There are 0 rows</h1>";
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// include('./config/Database.php');
+//
+// //instantiate and connect to DB
+// $database = new LibraryDatabase();
+// $db = $database->connect();
+//
+// $library = new Library($db);
+//
+// //blog post query
+// $res = $library->read();
+//
+// //get row count
+// $num = $res->rowCount();
+//
+// if ($num > 0) {
+//     $library_arr = array();
+//     $library_arr['data'] = array();
+//
+//     while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
+//         extract($row);
+//         $Library_item = array(
+//             'Library_Id' => $Library_Id,
+//             'Library_Name'=>$Library_Name,
+//             '$Library_Address'=>$Library_Address
+//         );
+//
+// echo "<tr><td>".$Library_Id."</td><td>".$Library_Name."</td><td>".$Library_Address."</td></tr>";
+// // echo $row["librarys_Id"];
+//         //push data
+//         // array_push($library_arr['data'], $library_item);
+//     }
+//     //turn to json & output
+//     // echo json_encode($library_arr);
+// } else {
+//     // echo json_encode(
+//     //     array("message" => 'No posts Found')
+//     // );
+//     echo "<h1>There are 0 rows</h1>";
+// }
