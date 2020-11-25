@@ -30,7 +30,6 @@ if ($num > 0) {
     while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
-
         $member_item = array(
             'Members_Id' => $Members_Id,
             'M_FName' => $M_FName,
