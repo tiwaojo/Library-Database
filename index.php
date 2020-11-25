@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
-  
+<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -147,8 +147,8 @@ Curabitur sit amet velit id nunc convallis gravida ut sit amet elit. Sed sapien 
             <th>Publisher Address</th>
             <?php include 'LibDatabase/Publisher/ReadPub.php'; ?>
         </tr>
-  </table>  
-        
+  </table>
+
 </body> -->
 
 </html>
