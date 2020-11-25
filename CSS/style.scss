@@ -82,7 +82,7 @@
         // width: 290px;
         color: #333;
         font-family: 'Nunito', sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 800;
         line-height: 20px;
 
@@ -92,7 +92,22 @@
         }
       }
     }
-
+    input, select {
+      box-sizing: border-box;
+      // border: 2px solid #182231;
+      border: none;
+      height: 50px;
+      border-radius: 8px;
+      background-color: #C8C8C8;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      margin: 10px 10px 10px 0;
+  
+      &:focus {
+        border: 4px solid #215AAE;
+      }
+    
+    }
   }
 
   h1,
@@ -106,23 +121,7 @@
   }
 
 
-  input {
-    box-sizing: border-box;
-    // border: 2px solid #182231;
-    border: none;
-    height: 50px;
-
-    // min-width: auto;
-    border-radius: 8px;
-    background-color: #C8C8C8;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 10px 10px 10px 0;
-
-    &:focus {
-      border: 4px solid #215AAE;
-    }
-  }
+  
 }
 
 
@@ -177,4 +176,11 @@ div .group-people {
   font-weight: 800;
   font-size: 18px;
   line-height: 20px;
+  transition: width 0.5s, height 0.5s transform 1.5s;
+  &:hover{
+    font-size: 20px;
+    // height: 50px;
+    // width: 290px;   
+    transform: scale(1.1);
+  }
 }

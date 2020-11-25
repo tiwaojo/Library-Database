@@ -1,4 +1,3 @@
-<php ?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -39,7 +38,7 @@
             <div class="centered-pos"><h1 class="acc-header " style="padding: 0;">
                 Login here
             </h1>
-                <form class="" action="#" method="post">
+                <form class="" action="login.php" method="post">
 
                     <div class="form-group">
                         <input type="text" name="email" placeholder="Email Address" class="form-control" required>
@@ -55,8 +54,8 @@
                         </p>
                     </div>
                     <br>
-                    <button type="submit" class="btn"> Login </button>
-                </form>
+                    
+                </form><input type="submit" class="btn" value="Submit"></input>
             </div>
         </div>
     </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,12 +42,14 @@
 
 
         <h1 class="acc-header ">
+            
             Create an Account
         </h1>
         <div class="centered">
-            <form class="container py-4 col-form-label-lg" action="#" autocomplete="on" method="post">
+            <form class="container py-4 col-form-label-lg" action="register.php" autocomplete="on" method="POST">
                 <!-- <h2> Signup Here </h2> -->
-
+                <!-- <h4>ID</h4>
+                <input type="number" name="member_Id" class="form-control" placeholder="First Name" required> -->
 
                 <div class="form-group-row">
                     <div class="form-group-column">
@@ -74,12 +77,22 @@
                     </div>
                 </div>
 
-                <h4>Phone Number</h4>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" required>
+                <div class="form-group-row">
+                    <div class="form-group-column">
+                        <h4>Phone Number</h4>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+                             class="form-control" required>
+                             <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+                    </div>
+                    <div class="form-group-column">
+                        <h4>Gender</h4>
+                        <select id="" name="sex" selected>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <!-- <option value="whatever">Whatever</option> -->
+                        </select>
+                    </div>
                 </div>
-
                 <h4>Address</h4>
                 <input type="text" name="streetAddone" placeholder="Street Address" style="width: 80%;"><br>
                 <input type="text" name="streetAddtwo" placeholder="Street Address Line 2" style="width: 80%;"><br>
@@ -90,21 +103,20 @@
 
                 <h4>Username</h4>
                 <div class="form-group">
-                    <input type="text" name="user" class="form-control" placeholder="Username" required>
+                    <input type="text" name="username" class="form-control" placeholder="Username" required>
                 </div>
                 <h4>Password</h4>
                 <div class="form-group">
                     <input type="password" name="password" placeholder="Password" class="form-control" required>
                 </div>
                 <div class="change-form">
-                    <p id="" class="form-text text-muted">Already have an account? Log in <a
-                            href="signin.php">here</a>
+                    <p id="" class="form-text text-muted">Already have an account? Log in <a href="signin.php">here</a>
                     </p>
                 </div>
                 <br>
-                <!-- create button for submitting the form -->
-                <button type="submit" class="btn"> Submit </button>
-            </form>
+                
+            </form><!-- create button for submitting the form -->
+                <input type="submit" class="btn" value="Submit"> </input>
         </div>
     </div>
 

@@ -72,7 +72,7 @@
 .right-rec form .change-form p {
   color: #333;
   font-family: 'Nunito', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
   line-height: 20px;
 }
@@ -82,16 +82,7 @@
   color: #215AAE;
 }
 
-.right-rec h1,
-.right-rec h2 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 40px;
-  padding-left: 15%;
-  text-align: left;
-}
-
-.right-rec input {
+.right-rec form input, .right-rec form select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -104,8 +95,17 @@
   margin: 10px 10px 10px 0;
 }
 
-.right-rec input:focus {
+.right-rec form input:focus, .right-rec form select:focus {
   border: 4px solid #215AAE;
+}
+
+.right-rec h1,
+.right-rec h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  padding-left: 15%;
+  text-align: left;
 }
 
 h3.lib-message {
@@ -153,5 +153,13 @@ div .group-people {
   font-weight: 800;
   font-size: 18px;
   line-height: 20px;
+  -webkit-transition: width 0.5s, height 0.5s transform 1.5s;
+  transition: width 0.5s, height 0.5s transform 1.5s;
+}
+
+.btn:hover {
+  font-size: 20px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */

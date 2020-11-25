@@ -43,8 +43,12 @@
     <table>
     
         <tr>
-            <th>Library Name</th>
-            <th>Number of Employees</th>
+            <th>ISBN</th>
+            <th>Book</th>
+            <th>Publisher_Id</th>
+            <th>Genre_Id</th>
+
+
         </tr>
      
 <!-- This contains the methods for views -->

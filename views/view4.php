@@ -67,16 +67,25 @@ $db = $database->connect();
 
 $member = new Members($db);
 
-//blog post query
-$res = $member->view4();
+//sql query to insert data
+$query="SELECT * FROM `view 4`";
+
+$stmt = $db->prepare($query);
+
+// Bind ID
+// $stmt->bindParam(1, $this->id);
+
+// Execute query
+$stmt->execute();
+
 
 //get row count
-$num = $res->rowCount();
+$num = $stmt->rowCount();
 if ($num > 0) {
     $member_arr = array();
     $member_arr['data'] = array();
 
-    while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
 
