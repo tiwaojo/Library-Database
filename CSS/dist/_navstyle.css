@@ -107,7 +107,10 @@ nav .views {
 }
 
 .content-area table, tr, th, td {
+<<<<<<< HEAD
   border: 1px solid black;
+=======
+>>>>>>> f77e626cc317dda6e3c03943e81276ec5fa0fcaf
   height: 34px;
   width: 724px;
   border-radius: 8px;

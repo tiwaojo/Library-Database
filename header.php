@@ -22,7 +22,7 @@
                     <a href="../index.php">Home</a>
                     <a href="../memberslist.php">Members</a>
                     <a href="../signin.php">Sign-In</a>
-                    <a href="../signup.php">Register</a>
+                    <!-- <a href="../signup.php">Register</a> -->
                     <a href="../booklist.php">Book List</a>
                     <a href="../librarylist.php">Visit Us!</a>
                     <div class= "views">

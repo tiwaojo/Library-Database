@@ -6,7 +6,7 @@
 //In this case the '*' gives everyone access t access to
 // header("Access-Control-Allow-Orgin: *");
 //header("Content-Type: application/json");
-
+ 
 
 include('models/Library.php');
 class LibraryRead extends Library

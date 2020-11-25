@@ -78,6 +78,6 @@ $M_Password=isset($_POST['password'])?$_POST['password']:die("Error: The data yo
       $result=$mysqli->query($insert_query);
     //   echo $result;
       //takes us back to intended page after execution
-        header("Location: ../index.php?signup=success");
+        header("Location: ../Library-Database/index.php?signup=success");
     //   echo "alert(Welcome to the Library)";
   }
