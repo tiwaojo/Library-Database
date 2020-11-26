@@ -4,22 +4,13 @@
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
-include('../header.php');?>
+include('header.php');
+?>
 
-<!-- This contains the methods for views -->
-<?php
 
-header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-include('../header.php');?>
-
-<div class = "Title">
-        <h2>Members with due books </h2>
-</div>
 <div class= "content-area">
+    <h2>Members with due books</h2>
     <table>
-    
         <tr>
             <th>First Name</th>
             <th>Due Date</th>
@@ -28,9 +19,6 @@ include('../header.php');?>
      
 <?php
 
-
-    // include_once('E:\wamp64\www\Library-Database\models\member\s.php');
-    // include_once('E:\wamp64\www\Library-Database\config\Database.php');
     include('../models/Members.php');
     include('../config/Database.php');
 

@@ -109,3 +109,4 @@
 
     //   // set properties
     //   $this->id = $row['id'];
+    ?>

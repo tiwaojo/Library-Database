@@ -8,7 +8,8 @@
 //header("Content-Type: application/json");
 
 
-include('models/Library.php');
+include('../models/Library.php');
+include('../config/Database.php');
 class LibraryRead extends Library
 {
 
@@ -41,7 +42,7 @@ class LibraryRead extends Library
                 'Library_Address'=>$Library_Address
             );
 
-    print "<tr><td>".$Library_Id."</td><td>".$Library_Name."</td><td>".$Library_Address."</td></tr>";
+    echo "<tr><td>".$Library_Id."</td><td>".$Library_Name."</td><td>".$Library_Address."</td></tr>";
     return $row;
     // echo $row["librarys_Id"];
             //push data
@@ -53,7 +54,7 @@ class LibraryRead extends Library
         // echo json_encode(
         //     array("message" => 'No posts Found')
         // );
-        print "<h1>There are 0 rows</h1>";
+        echo "<h1>There are 0 rows</h1>";
     }
   }
 
