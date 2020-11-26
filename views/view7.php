@@ -4,14 +4,11 @@
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
-include('../header.php');?>
+include('header.php');?>
 
-<div class = "Title">
-        <h2>View 7</h2>
-</div>
-<div class= "content-area">
+<div class="content-area">
+    <h2>View 7</h2>
     <table>
-    
         <tr>
             <th>Employee ID</th>
             <th>First Name</th>
@@ -19,8 +16,8 @@ include('../header.php');?>
             <th>Email</th>
             <th>Username</th>
             <th>Password</th>
-        </tr>    
-<?php
+        </tr>
+        <?php
 
 include('../models/Employees.php');
 include('../config/Database.php');
@@ -72,6 +69,6 @@ echo "<tr><td>".$Employees_Id."</td><td>".$E_FName."</td><td>".$E_LName."</td><t
     echo "<h1>There are 0 rows</h1>";
 }
 ?>
-</table>
+    </table>
 </div>
 </body>
