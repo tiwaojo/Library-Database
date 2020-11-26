@@ -1,7 +1,7 @@
 <!-- This contains the methods for views -->
 <?php
 
-header("Access-Control-Allow-Orgin: *");
+// header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 include('header.php');?>

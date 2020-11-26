@@ -18,9 +18,12 @@ include('header.php');?>
             <th>Sex</th>
             <th>Loan ID</th>
             <th>Date Loaned</th>
-        </tr>     
-<?php
+        </tr>
+     
+    <!-- This contains the methods for views -->
+    <?php
 
+    header("Access-Control-Allow-Orgin: *");
     // header("Content-Type: application/json");
 
 include('../models/Members.php');

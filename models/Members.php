@@ -45,7 +45,7 @@ class Members
     public function readId($id)
     {
         //sql query to insert data
-        $query="SELECT * FROM ".$this->table_name." WHERE $this->Members_Id = ".$id;
+        $query="SELECT * FROM ".$this->table_name." WHERE $Members_Id = ".$id;
 
         $stmt = $this->conn->prepare($query);
 

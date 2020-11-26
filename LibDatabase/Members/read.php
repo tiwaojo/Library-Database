@@ -7,9 +7,24 @@
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
+<<<<<<< HEAD
 
 include_once('models/Members.php');
 include_once('config/Database.php');
+=======
+//header("Access-Control-Allow-Orgin: *");
+//header("Content-Type: application/json");
+
+
+
+
+
+include_once './models/Members.php';
+//include_once 'C:\wamp64\www\Library-Database/config/Database.php';
+
+class MemberRead extends Member
+{
+>>>>>>> cb318a6c876e00b43c838bbbd9eb50e578b6e005
 
 
 //instantiate and connect to DB

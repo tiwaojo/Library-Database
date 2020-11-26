@@ -4,13 +4,13 @@
 //headers
 //Thois is to allow others to gain access to our api. i.e. only specific tokens(people) can access our api.
 //In this case the '*' gives everyone access t access to
-// header("Access-Control-Allow-Orgin: *");
+header("Access-Control-Allow-Orgin: *");
 //header("Content-Type: application/json");
 
 
 // include_once('E:\wamp64\www\Library-Database\models\Members.php');
 // include_once('E:\wamp64\www\Library-Database\config\Database.php');
-include('./models/Employees.php');
+include('../../models/Employees.php');
 //include('../../config/Database.php');
 class EmployeeRead extends Employee
 {
@@ -28,7 +28,7 @@ class EmployeeRead extends Employee
     $res=parent::readId($id);
     return $res;
   }
-  public function printEmployeeColumnTable($response)
+  public function printBookColumnTable($response)
   {
     // code...
     $num=$response->rowCount();

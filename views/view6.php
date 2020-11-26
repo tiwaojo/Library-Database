@@ -2,7 +2,7 @@
     <!-- This contains the methods for views -->
 <?php
 
-header("Access-Control-Allow-Orgin: *");
+// header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 include('header.php');?>
@@ -15,7 +15,14 @@ include('header.php');?>
             <th>Book</th>
             <th>Genre</th>
         </tr>
-     <?php
+     
+
+<!-- This contains the methods for views -->
+<?php
+
+header("Access-Control-Allow-Orgin: *");
+// header("Content-Type: application/json");
+
 
 include('../config/Database.php');
 

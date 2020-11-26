@@ -2,7 +2,7 @@
 <!-- This contains the methods for views -->
 <?php
 
-header("Access-Control-Allow-Orgin: *");
+// header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
 include('header.php');?>
@@ -21,8 +21,12 @@ include('header.php');?>
 
         </tr>
      
-
+<!-- This contains the methods for views -->
 <?php
+
+header("Access-Control-Allow-Orgin: *");
+// header("Content-Type: application/json");
+
 
 // include_once('E:\wamp64\www\Library-Database\models\employees\s.php');
 // include_once('E:\wamp64\www\Library-Database\config\Database.php');
