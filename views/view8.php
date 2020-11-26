@@ -1,25 +1,23 @@
-
 <!-- This contains the methods for views -->
 <?php
 
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
-include('../header.php');?>
+include('header.php');?>
 
-<div class = "Title">
-        <h2>View 8 </h2>
-</div>
-<div class= "content-area">
+
+<div class="content-area">
+    <h2>View 8 </h2>
     <table>
-    
+
         <tr>
             <th>Member ID</th>
             <th>First Name</th>
             <th>Last Name</th>
         </tr>
 
-<?php
+        <?php
     
     // include_once('E:\wamp64\www\Library-Database\models\employees\s.php');
     // include_once('E:\wamp64\www\Library-Database\config\Database.php');
@@ -82,6 +80,6 @@ echo "<tr><td>".$Members_Id."</td><td>".$M_Fname."</td><td>".$M_LName."</td></tr
     echo "<h1>There are 0 rows</h1>";
 }
 ?>
-</table>
+    </table>
 </div>
 </body>

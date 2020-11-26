@@ -5,14 +5,11 @@
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
-include('../header.php');?>
+include('header.php');?>
 
-<div class = "Title">
-        <h2>View 6 </h2>
-</div>
 <div class= "content-area">
-    <table>
-    
+    <h2>View 6</h2>
+    <table>    
         <tr>
             <th>ISBN</th>
             <th>Book</th>

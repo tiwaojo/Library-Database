@@ -9,7 +9,8 @@ header("Access-Control-Allow-Orgin: *");
 
 
 
-include_once './models/Books.php';
+include_once('../models/Books.php');
+include_once('../config/Database.php');
 /**
  *
  */
@@ -48,7 +49,7 @@ class BooksRead extends Books
                 'Author_Id'=>$Author_Id,
             );
 
-    print "<tr><td>".$ISBN."</td><td>".$Book_Title."</td><td>".$Publisher_Id."</td><td>".$Genre_Id."</td><td>".$Library_Id."</td><td>".$Author_Id."</td></tr>";
+    echo "<tr><td>".$ISBN."</td><td>".$Book_Title."</td><td>".$Publisher_Id."</td><td>".$Genre_Id."</td><td>".$Library_Id."</td><td>".$Author_Id."</td></tr>";
     return $row;
     // echo $row["librarys_Id"];
             //push data
@@ -60,7 +61,7 @@ class BooksRead extends Books
         // echo json_encode(
         //     array("message" => 'No posts Found')
         // );
-        print "<h1>There are 0 rows</h1>";
+        echo "<h1>There are 0 rows</h1>";
     }
   }
 

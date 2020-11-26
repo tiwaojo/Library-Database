@@ -7,8 +7,8 @@ header('Access-Control-Allow-Origin: *');
 //   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization,X-Requested-With');
 
 
-include('models/Members.php');
-include('config/Database.php');
+include('../models/Members.php');
+include('../config/Database.php');
 
 
 //instantiate and connect to DB
