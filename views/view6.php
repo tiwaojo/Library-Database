@@ -10,7 +10,7 @@ include('header.php');?>
 <div class= "content-area">
     <h2>View 6</h2>
     <table>    
-        <tr>
+    <tr id="table-header">
             <th>ISBN</th>
             <th>Book</th>
             <th>Genre</th>

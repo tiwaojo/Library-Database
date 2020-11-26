@@ -14,7 +14,7 @@ include_once('../config/Database.php');
 /**
  *
  */
-class BooksRead extends Book
+class BooksRead extends Books
 {
 
   function __construct($db)

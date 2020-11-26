@@ -9,7 +9,7 @@ include('header.php');?>
 <div class="content-area">
     <h2>View 7</h2>
     <table>
-        <tr>
+    <tr id="table-header">
             <th>Employee ID</th>
             <th>First Name</th>
             <th>Last Name</th>

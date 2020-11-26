@@ -80,14 +80,14 @@ nav .dropdown-views a {
   vertical-align: middle;
 }
 .Title h2 {
-  font-size: 7vw;
+  font-size: 6vw;
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   color: #333;
   position: absolute;
+  top: 65%;
   left: 60%;
   text-align: start;
-  line-height: 120px;
 }
 
 .content-area h2 {
@@ -172,7 +172,6 @@ nav .dropdown-views a {
   z-index: 99;
   display: none;
   color: #1B427D;
-  left: 0%;
 }
 #menu ul.sub-menus li {
   display: inline-block;

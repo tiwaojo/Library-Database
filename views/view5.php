@@ -11,7 +11,7 @@ include('header.php');?>
 <div class= "content-area">
     <h2>View 5</h2>
     <table>
-        <tr>
+    <tr id="table-header">
             <th>Member ID</th>
             
         </tr>

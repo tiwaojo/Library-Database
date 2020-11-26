@@ -10,7 +10,7 @@ include('header.php');?>
     <h2>View 3</h2>
     <table>
      
-        <tr>
+    <tr id="table-header">
             <th>Employee ID</th>
             <th>First Name</th>
             <th>Last Name</th>

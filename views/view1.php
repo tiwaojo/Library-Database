@@ -7,18 +7,10 @@ header("Access-Control-Allow-Orgin: *");
 include('header.php');
 ?>
 
-<!-- This contains the methods for views -->
-<?php
-
-header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-include('../header.php');?>
-
 <div class= "content-area">
     <h2>Members with due books</h2>
     <table>
-        <tr>
+    <tr id="table-header">
             <th>First Name</th>
             <th>Due Date</th>
             <th>Book Title</th>

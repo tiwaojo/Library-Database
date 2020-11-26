@@ -39,7 +39,7 @@ function updatemenu() {
                          </button> -->
                          <ul>
                             <a href="../views/index.php">Home</a>
-                            <li><a class='dropbtn' href='http://'>Views</a>
+                            <li><a class='dropbtn' >Views</a>
                                 <ul class='sub-menus'>
                                     <li><a href='view1.php'>Views 1</a></li>
                                     <li><a href='view2.php'>Views 2</a></li>
@@ -57,7 +57,7 @@ function updatemenu() {
                             </li>
                             <li><a href="../views/booklist.php">Book List</a></li>
                             <li> <a href="../views/librarylist.php">Visit Us</a></li>
-                            <li> <a href="../views/signin.php">Sign-In</a></li>
+                            <li> <a href="../views/signin.php">Sign-out</a></li>
                         </ul>
                 </div>
 

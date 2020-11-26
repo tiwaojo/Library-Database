@@ -80,14 +80,6 @@ nav {
 
 .Title {
 	height: 100vh;
-
-	// position: fixed;
-	// top: 100px;
-	// background-image: url("../Images/books-background-clipart.jpg");
-	// background-size: auto;
-	// background-position: center;
-	// // background-repeat: repeat-y;
-	// background-blend-mode: color;
 	background-color: #F2F2F2;
 
 	// background-attachment: fixed;
@@ -99,15 +91,15 @@ nav {
 	}
 
 	h2 {
-		font-size: 7vw;
+		font-size: 6vw;
 		font-family: 'Nunito', sans-serif;
 		text-transform: uppercase;
 		color: #333;
 		position: absolute;
-		// top: 50%;
+		top: 65%;
 		left: 60%;
 		text-align: start;
-		line-height: 120px;
+		// line-height: 120px;
 	}
 }
 
@@ -202,18 +194,13 @@ nav {
 		a:hover {
 			color: #0099CC;
 			background: #F2F2F2;
-		}
-		
+		}		
 	}
 
 	a {
 		display: inline-flex;
 		// line-height: 45px;
 		padding: 0 14px;
-
-		// text-decoration: none;
-		// color: #FFFFFF;
-		// font-size: 16px;
 		.dropdown-arrow:after {
 			content: "\25BE";
 			margin-left: 5px;
@@ -223,13 +210,11 @@ nav {
 	ul.sub-menus {
 		height: auto;
 		overflow: hidden;
-		// width: 170px;
-		// background: #ffffff;
 		position: absolute;
 		z-index: 99;
 		display: none;
 		color: #1B427D;
-		left:0%;
+		// left:0%;
 
 		li {
 			display: inline-block;

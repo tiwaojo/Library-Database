@@ -6,10 +6,6 @@
 //In this case the '*' gives everyone access t access to
 // header("Access-Control-Allow-Orgin: *");
 //header("Content-Type: application/json");
-<<<<<<< HEAD
-=======
-
->>>>>>> cb318a6c876e00b43c838bbbd9eb50e578b6e005
 
 
 include('../models/Library.php');
