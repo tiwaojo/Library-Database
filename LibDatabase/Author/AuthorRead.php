@@ -16,7 +16,7 @@
  *
  */
 header("Access-Control-Allow-Orgin: *");
-include('./models/Author.php');
+include('C:\wamp64\www\GitHub\Library-Database\models\Author.php');
  class AuthorRead Extends Author
  {
    public function __construct($db)
@@ -26,15 +26,18 @@ include('./models/Author.php');
      // database connection and table name
      // private $conn;
      // private $table_name = "products";
+     public function printAuthorTable($response){
+
+     }
      public function printAuthorColumnTable($response){
        $num=$response->rowCount();
        if ($num > 0) {
-           $Author_arr = array();
-           $Author_arr['data'] = array();
+           $library_arr = array();
+           $library_arr['data'] = array();
 
            while ($row = $response->fetch(PDO::FETCH_ASSOC)) {
                extract($row);
-               $Author_item = array(
+               $Library_item = array(
                    'Author_Id' => $Author_Id,
                    'A_FName'=>$A_FName,
                    'A_LName'=>$A_LName,
@@ -65,7 +68,6 @@ include('./models/Author.php');
        $res=parent::readId($id);
        return $res;
      }
-   }
 
 
          //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -73,7 +75,7 @@ include('./models/Author.php');
      //   // set properties
      //   $this->id = $row['id'];
      //   $this->name = $row['name'];
-
+     }
 
 
 

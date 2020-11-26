@@ -6,11 +6,14 @@
 header("Access-Control-Allow-Orgin: *");
 // header("Content-Type: application/json");
 
-include('header.php');?>
+include('../header.php');?>
 
+<div class = "Title">
+        <h2>View 5 </h2>
+</div>
 <div class= "content-area">
-    <h2>View 5</h2>
     <table>
+    
         <tr>
             <th>Member ID</th>
             

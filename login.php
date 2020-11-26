@@ -32,6 +32,6 @@ $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND
     //   echo "An account exists with these credentials";
       header("location: ../Library-Database/member_search.php");
   }else{
-    header("Location: ../views/signin.php?error=invalidfields=".$M_Email);
+    header("Location: ../signup.php?error=invalidfields=".$M_Email);
   }
 ?>
