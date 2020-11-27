@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
+<head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,20 +43,13 @@
 <div class="Title">
 <h2>Display all members</h2>
 </div>
-<div class= "content-area">
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-        <?php
-    // $object=new LibraryDatabase;
-    // $object->connect();
+<div class= "content-area" >
+  <?php
+// $object=new LibraryDatabase;
+// $object->connect();
 
-    include 'LibDatabase/Members/read.php';
+include 'LibDatabase/Members/read.php';
 
-  ?>
-   </table>
+?>
 </div>
   </body>
