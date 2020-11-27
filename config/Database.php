@@ -41,15 +41,21 @@ class LibraryDatabase
     }
     public function connectsqli()
     {
+        $servername = "localhost";
+        $username = "root";
+        // $password="tarzan114";//Tanzir
+        // $dbname="librarydatabase";//Tanzir
+        // $password="admin";//Tiwa
+        // $dbname="libdatabase";//Tiwa
+        // $password="admin";//aaditya
+        // $dbname="librarydb"; //aaditya
+        // $password="qwer1234";//Aryan
+        // $dbname="librarydatabase"; //Aryan
+        $password="";//new user
+        $dbname=""; //new user
 
-      $servername = "localhost";
-      $username = "root";
-      $password = "qwer1234";
-      $dbname = "librarydatabase";
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      return $conn;
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        return $conn;
     }
 }
-?>
