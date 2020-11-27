@@ -7,7 +7,12 @@ $username = "root";
 // $dbname = "libdatabase";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+include('../config/Database.php');
+
+
+//instantiate and connect to DB
+$database = new LibraryDatabase();
+$conn = $database->connectsqli();// Create connection
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

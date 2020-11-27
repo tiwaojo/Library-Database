@@ -20,12 +20,12 @@ class LibraryDatabase
         $this->user="root";
         // $this->password="tarzan114";//Tanzir
         //$this->dbname="librarydatabase";//Tanzir
-        $this->password="admin";//Tiwa
-        $this->dbname="libdatabase";//Tiwa
+        //$this->password="admin";//Tiwa
+        //$this->dbname="libdatabase";//Tiwa
         // $this->password="admin";//aaditya
         // $this->dbname="librarydb"; //aaditya
-        //$this->password="qwer1234";//Aryan
-        //$this->dbname="librarydatabase"; //Aryan
+        // $this->password="qwer1234";//Aryan
+        // $this->dbname="librarydatabase"; //Aryan
 
 
         try {
@@ -36,6 +36,18 @@ class LibraryDatabase
         } catch (\Exception $e) {
             echo "Connection failed: ".$e->getMessage();
         }
+    }
+    public function connectsqli()
+    {
+
+      $servername = "localhost";
+      $username = "root";
+      $password = "qwer1234";
+      $dbname = "librarydatabase";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      return $conn;
     }
 }
 ?>
