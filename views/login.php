@@ -30,7 +30,7 @@ $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND
   // Else not correct, a message will be displayed for the user to try again
   if (mysqli_num_rows($result) == 1) {
     //   echo "An account exists with these credentials";
-      header("Location: ../views/member_search.php");
+      header("Location: ../views/index.php");
   }else{
     header("Location: ../views/signin.php?error=invalidfields=".$M_Email);
   }
