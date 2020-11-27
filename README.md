@@ -8,5 +8,5 @@ In order to execute this file please
 
 
 NOTES when looking at the files:
-1.Primary focus of files are in the views
-2.make sure to change ur password and username parameters in the database.php file in the config to the one you have currently for your server connection
+1. Primary focus of files are in the views
+2. make sure to change ur password and username parameters in the database.php file in the config to the one you have currently for your server connection
