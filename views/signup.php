@@ -37,7 +37,7 @@
 
     <div class="right-rec">
         <div>
-            <img class="group-people" src="Images\Group.svg" alt="group">
+            <img class="group-people" src="../Images\Group.svg" alt="group">
         </div>
 
 

@@ -25,14 +25,14 @@
                 <h3 class="lib-message">
                     Join our knowledge repository
                 </h3>
-                <h5>Our Library Database contains a variety of content to explore</h5>
+                <h5>Our Library Database contains a variety of content to explore.</h5>
             </div>
         </div>
 
         <div class="right-rec">
 
             <div>
-                <img class="group-people" src="Images\community.svg" alt="group" style="width:40%">
+                <img class="group-people" src="../Images\community.svg" alt="group" style="width:40%">
             </div>
 
             <div class="centered-pos"><h1 class="acc-header " style="padding: 0;">

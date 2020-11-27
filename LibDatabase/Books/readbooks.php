@@ -1,8 +1,10 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "qwer1234";
-$dbname = "librarydatabase";
+// $password = "qwer1234";
+// $dbname = "librarydatabase";
+// $password = "admin";
+// $dbname = "libdatabase";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

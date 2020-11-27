@@ -69,6 +69,6 @@ function updatemenu() {
         </div>
     </header>
     <section class="Title">
-        <img src="../Images\Group.svg" alt="group at library">
+        <img src="../Images\Group2.svg" alt="group at library">
         <h2>Library Database</h2>
     </section>
