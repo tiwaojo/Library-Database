@@ -26,6 +26,8 @@ class LibraryDatabase
         // $this->dbname="librarydb"; //aaditya
         // $this->password="qwer1234";//Aryan
         // $this->dbname="librarydatabase"; //Aryan
+        $this->password="";//new user
+        $this->dbname=""; //new user
 
 
         try {
