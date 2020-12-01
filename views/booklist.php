@@ -8,7 +8,7 @@
         <?php
 
 
-    include('../LibDatabase/Books/readbooks.php');//readbooks.php will mirror
+    include('../LibDatabase/Books/readbooks.php');//readbooks.php will send the table
 
   ?>
 
