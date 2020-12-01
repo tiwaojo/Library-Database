@@ -1,12 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-// $password = "qwer1234";
-// $dbname = "librarydatabase";
-// $password = "admin";
-// $dbname = "libdatabase";
 
-// Create connection
 include('../config/Database.php');
 
 
@@ -17,13 +12,14 @@ $conn = $database->connectsqli();// Create connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
+//sql statement to select columns from author table
 $sql = "SELECT ISBN, Book_Title, Author_Id, Genre_Id FROM book";
-$result = $conn->query($sql);
+//executes statement
+$result = $conn->query($sql);//exexutes tbale
 if (!$result) {
     trigger_error('Invalid query: ' . $conn->error);
-}
-
+}//if statement stating that its a connection error
+//if table is there then it will echo a table for some book variables
 if ($result->num_rows > 0) {
   echo "<table><tr><th>ISBN</th><th>Book Name</th><th>Author_Id</th><th>Genre Id</th></tr>";
   // output data of each row

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Database</title>
-    <!-- <link rel="stylesheet" href="CSS/navstyle.css"> -->
+
     <link rel="stylesheet" href="../CSS/navstyle.css">
-    <!-- FOnts -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@700&family=Roboto&display=swap"
@@ -18,7 +18,7 @@
 
 </head>
 <script>
-function updatemenu() {
+function updatemenu() {//updates the menu
     if (document.getElementById('responsive-menu').clicked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
         document.getElementById('menu').style.borderBottomLeftRadius = '0';
@@ -33,10 +33,7 @@ function updatemenu() {
         <div class="wrapper">
 
             <nav id='menu'>
-                <div class="collapse" id="nav-items">
-                    <!-- <button id="responsive-menu" type="menu" data-toggle="collapse"
-                        data-target="#nav-items"><img src="Images\equalizer-black-18dp.svg" alt="">
-                         </button> -->
+                <div class="collapse" id="nav-items"><!--All headers at top of page-->
                          <ul>
                             <a href="../views/index.php">Home</a>
                             <li><a class='dropbtn' >Views</a>
@@ -61,7 +58,7 @@ function updatemenu() {
                         </ul>
                 </div>
 
-               
+
             </nav>
 
 
@@ -69,6 +66,6 @@ function updatemenu() {
         </div>
     </header>
     <section class="Title">
-        <img src="../Images\Group2.svg" alt="group at library">
+        <img src="../Images\Group2.svg" alt="group at library"><!--background imgage-->
         <h2>Library Database</h2>
     </section>

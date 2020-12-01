@@ -2,24 +2,23 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD:views/memberslist.php
+
     <!DOCTYPE html>
     <html lang="en">
-=======
->>>>>>> cb318a6c876e00b43c838bbbd9eb50e578b6e005:booklist.php
+
 
     <head>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="CSS/navstyle.css">
+        <link rel="stylesheet" href="CSS/navstyle.css"><!--styling-->
     </head>
 
 <body>
     <div class="box-area">
         <header>
-            <div class="wrapper">
+            <div class="wrapper"><!-- all headers at the top of the webpage-->
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="memberslist.php">Members</a>
@@ -46,7 +45,7 @@
             </div>
         </header>
         <div class="Title">
-            <h2> OnTech Public Library </h2>
+            <h2> OnTech Public Library </h2><!--title-->
         </div>
         <div class="content-area">
             <div class="wrapper">
@@ -58,7 +57,7 @@
 </body>
 
 <div class="Title">
-    <h2>Display all members</h2>
+    <h2>Display all members</h2><!-- table displays all members in database-->
 </div>
 <div class="content-area">
     <table>
@@ -68,16 +67,15 @@
             <th>Last Name</th>
         </tr>
         <?php
-    // $object=new LibraryDatabase;
-    // $object->connect();
 
-    include('LibDatabase/Members/read.php');
+
+    include('LibDatabase/Members/read.php');//includes functions from read.php
 
   ?>
     </table>
 </div>
-<<<<<<< HEAD:views/memberslist.php
+
 </body>
-=======
+
   </body>
->>>>>>> cb318a6c876e00b43c838bbbd9eb50e578b6e005:booklist.php
+</html>

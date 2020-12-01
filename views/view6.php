@@ -1,9 +1,5 @@
-
-    <!-- This contains the methods for views -->
+<!-- This contains the methods for views -->
 <?php
-
-// header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
 
 include('header.php');?>
 
@@ -16,14 +12,10 @@ include('header.php');?>
             <th>Genre</th>
         </tr>
      
-
 <!-- This contains the methods for views -->
 <?php
 
 header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-
 include('../config/Database.php');
 
 
@@ -31,16 +23,13 @@ include('../config/Database.php');
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-// $employee = new Employee($db);
+//Select Table
 $query = "SELECT * FROM `find all horror books`";
        
-       $stmt = $db->prepare($query);
-        // $stmt->bindParam(1, $this->id);
-        $stmt->execute();
+    $stmt = $db->prepare($query);
+    $stmt->execute();
 
 //blog post query
-// $res = $employee->view1();
-
 //get row count
 $num = $stmt->rowCount();
 if ($num > 0) {
@@ -50,24 +39,18 @@ if ($num > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
-
+        // Select required rows to be displayed for view 6
         $view_item = array(
             'ISBN' => $ISBN,
-            'Book_Title' => $Book_Title,
-            // 'Publisher_Id' => $Publisher_Id,            
+            'Book_Title' => $Book_Title,         
             'Genre_Name' => $Genre_Name, 
         );
 echo "<tr><td>".$ISBN."</td><td>".$Book_Title."</td><td>".$Genre_Name."</td></tr>";
-// echo $row["employees_Id"];
-        //push data
-    //    array_push($view_arr['data'], $view_item);
+
     }
-    //turn to json & output as JSON PREETY PRINT
-    // echo json_encode($view_arr,JSON_PRETTY_PRINT);
+
 } else {
-    // echo json_encode(
-    //     array("message" => 'No posts Found')
-    // );
+
     echo "<h1>There are 0 rows</h1>";
 }
 ?>
