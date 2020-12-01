@@ -59,12 +59,7 @@ function updatemenu() {//updates the menu
                             <li> <a href="../views/signin.php">Sign-out</a></li>
                         </ul>
                 </div>
-
-
             </nav>
-
-
-
         </div>
     </header>
     <section class="Title">
