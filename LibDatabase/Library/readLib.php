@@ -1,8 +1,8 @@
 <?php
 
 
-include('../models/Library.php');
-include('../config/Database.php');
+include_once('../models/Library.php');
+include_once('../config/Database.php');
 class LibraryRead extends Library
 {
 

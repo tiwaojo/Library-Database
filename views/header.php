@@ -7,6 +7,7 @@
     <title>Library Database</title>
 
     <link rel="stylesheet" href="../CSS/navstyle.css">
+    <link rel="stylesheet" href="CSS/navstyle.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -53,7 +54,8 @@ function updatemenu() {//updates the menu
                             <li> <a href="../views/member_search">Search</a>
                             </li>
                             <li><a href="../views/booklist.php">Book List</a></li>
-                            <li> <a href="../views/librarylist.php">Visit Us</a></li>
+                            <li> <a href="../views/librarylist.php">Library List</a></li>
+                            <li> <a href="../views/update.php">Update</a></li>
                             <li> <a href="../views/signin.php">Sign-out</a></li>
                         </ul>
                 </div>

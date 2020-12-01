@@ -1,6 +1,6 @@
 <?php
 
-include_once './models/Genre.php';
+include_once('../models/Genre.php');
 class GenreRead extends Genre
 {
 

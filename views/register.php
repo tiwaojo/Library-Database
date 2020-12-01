@@ -29,7 +29,6 @@ $M_Password=isset($_POST['password'])?$_POST['password']:die("Error: The data yo
 
 
   $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND M_Password='".$M_Password."' LIMIT 1");
-/
   if (mysqli_num_rows($result) > 0) {
       echo "An account exists with these credentials";//checks if account already exists
   } else {

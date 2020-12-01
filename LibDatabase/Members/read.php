@@ -1,15 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "qwer1234";
-$dbname = "librarydatabase";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include('../config/Database.php');
+//instantiate and connect to DB
+$database = new LibraryDatabase();
+$conn = $database->connectsqli();
 
 $sql = "SELECT Members_Id, M_FName, M_LName FROM members";
 $result = $conn->query($sql);

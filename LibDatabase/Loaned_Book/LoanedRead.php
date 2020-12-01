@@ -1,8 +1,5 @@
 <?php
-
-header("Access-Control-Allow-Orgin: *");
-
-include('./models/loaned_book.php');
+include_once('../models/loaned_book.php');
 
 class loaned_bookRead extends loaned_book
 {
