@@ -1,6 +1,8 @@
+
+<div class="content-area">
+    <h2>Display all Libraries</h2>
+
 <?php
-
-
 include_once('../models/Library.php');
 include_once('../config/Database.php');
 class LibraryRead extends Library
@@ -47,7 +49,8 @@ class LibraryRead extends Library
 
 }
 
-
+?>
+</div>
 
 
 

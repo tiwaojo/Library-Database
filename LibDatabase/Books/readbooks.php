@@ -1,8 +1,8 @@
+<div class="content-area">
+     <h2>Display all books</h2>
+  
 <?php
-
 include_once('../config/Database.php');
-
-
 //instantiate and connect to DB
 $database = new LibraryDatabase();
 $conn = $database->connectsqli();// Create connection
@@ -26,3 +26,6 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
+?>
+
+</div>

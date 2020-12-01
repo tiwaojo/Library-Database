@@ -54,17 +54,12 @@ function updatemenu() {//updates the menu
                             <li> <a href="../views/member_search">Search</a>
                             </li>
                             <li><a href="../views/booklist.php">Book List</a></li>
-                            <li> <a href="../views/librarylist.php">Library List</a></li>
+                            <li> <a href="../views/readLib.php">Library List</a></li>
                             <li> <a href="../views/update.php">Update</a></li>
                             <li> <a href="../views/signin.php">Sign-out</a></li>
                         </ul>
                 </div>
-
-
             </nav>
-
-
-
         </div>
     </header>
     <section class="Title">
