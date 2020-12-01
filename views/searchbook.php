@@ -1,8 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-//   header('Content-Type: application/json');
+
   header('Access-Control-Allow-Methods: POST');
-//   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization,X-Requested-With');
 
 
 
@@ -24,8 +23,8 @@ $result =$mysqli->query("SELECT * FROM book WHERE Book_Title= '".$Book_Title."' 
 echo "<table border='1'>";
 while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
     echo "<tr>";
-    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+    foreach ($row as $field => $value) {
+        echo "<td>" . $value . "</td>";
     }
     echo "</tr>";
 }
