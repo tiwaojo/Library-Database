@@ -18,16 +18,16 @@ class LibraryDatabase
         $this->port=3306;
         $this->socket="";
         $this->user="root";
-        // $this->password="tarzan114";//Tanzir
-        //$this->dbname="librarydatabase";//Tanzir
+         $this->password="admin";//Tanzir
+        $this->dbname="librarydatabase";//Tanzir
         //$this->password="admin";//Tiwa
         //$this->dbname="libdatabase";//Tiwa
         // $this->password="admin";//aaditya
         // $this->dbname="librarydb"; //aaditya
         // $this->password="qwer1234";//Aryan
         // $this->dbname="librarydatabase"; //Aryan
-        $this->password="";//new user
-        $this->dbname=""; //new user
+        //$this->password="";//new user
+        //$this->dbname=""; //new user
 
 
         try {
