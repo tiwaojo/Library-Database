@@ -18,40 +18,20 @@
   </head>
   <body>
     <?php
+
+    // Establish Database connection
 include('./config/Database.php');
   include_once 'C:\wamp64\www\GitHub\Library-Database\LibDatabase\Author\AuthorRead.php';
 $database=new LibraryDatabase();
 $db = $database->connect();
 $author=new AuthorRead($db);
+
+
      ?>
-    <!-- <script type="text/javascript">
-    function UpdateAuthor() {
-      var submitted = new Array();
-      var id=document.getElementByName('idselect').value;
-      var FName=document.getElementById('fname').value;
-      var LName=document.getElementById('lname').value;
-      var Birth=document.getElementById('BirthDate').value;
-      var Country=document.getElementById('A_Country').value;
-      var AuthorArr=[id,FName,LName,Birth,Country];
-      for(let i=1;i<AuthorArr.length;i++){
-        if(AuthorArr[i]!=""){
-          submitted[i-1]=AuthorArr[i];
-        }
-      }
-      return submitted;
-
-    } -->
-<!--
-
-    </script> -->
-
       <h2>Update and Read Author Information</h2>
       <h3>select table</h3>
       <label for="Tables">Choose which Author id to update:</label>
         <div id="inputfield">
-          <!-- <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname"><br> -->
-          <!-- <select class="" name=""> -->
         </div>
       <form action=''method="post"name="UpdateAuthor">
         <select class="" id="idselect"name="authorIdSelect">
@@ -73,6 +53,7 @@ $author=new AuthorRead($db);
         <input type='submit' name="UpdateAuthor"onclick="UpdateAuthor()">
       </form>
           <?php
+          //Script to update author information
           if (isset($_POST["UpdateAuthor"])){
 
             $id=$_POST['authorIdSelect'];

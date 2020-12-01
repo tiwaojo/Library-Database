@@ -1,9 +1,5 @@
-
 <!-- This contains the methods for views -->
 <?php
-
-// header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
 
 include('header.php');?>
 
@@ -25,14 +21,7 @@ include('header.php');?>
 <?php
 
 header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
-
-// include_once('E:\wamp64\www\Library-Database\models\employees\s.php');
-// include_once('E:\wamp64\www\Library-Database\config\Database.php');
 include('../models/Employees.php');
-
-
 include('../config/Database.php');
 
 
@@ -40,12 +29,10 @@ include('../config/Database.php');
 $database = new LibraryDatabase();
 $db = $database->connect();
 
-// $employee = new Employee($db);
+//Select Table
 $query = "SELECT * FROM `view 10`";
-       
-       $stmt = $db->prepare($query);
-        // $stmt->bindParam(1, $this->id);
-        $stmt->execute();
+    $stmt = $db->prepare($query);
+    $stmt->execute();
 
 //blog post query
 // $res = $employee->view1();
@@ -59,7 +46,7 @@ if ($num > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
-
+        // Select required rows to be displayed for view 10
         $view_item = array(
             'ISBN' => $ISBN,
             'Book_Title' => $Book_Title,
@@ -67,16 +54,10 @@ if ($num > 0) {
             'Genre_Id' => $Genre_Id, 
         );
 echo "<tr><td>".$ISBN."</td><td>".$Book_Title."</td><td>".$Publisher_Id."</td><td>".$Genre_Id."</td></tr>";
-// echo $row["employees_Id"];
-    //     //push data
-    //    array_push($view_arr['data'], $view_item);
+
     }
-    //turn to json & output
-    // echo json_encode($view_arr);
+
 } else {
-    // echo json_encode(
-    //     array("message" => 'No posts Found')
-    // );
     echo "<h1>There are 0 rows</h1>";
 }
 ?>

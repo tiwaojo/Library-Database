@@ -1,11 +1,7 @@
-     
-
 <!-- This contains the methods for views -->
 <?php
 
 header("Access-Control-Allow-Orgin: *");
-// header("Content-Type: application/json");
-
 include('header.php');?>
 
 <div class= "content-area">
@@ -13,7 +9,6 @@ include('header.php');?>
     <table>
     <tr id="table-header">
             <th>Member ID</th>
-            
         </tr>
 <?php
 
@@ -24,12 +19,13 @@ include('../config/Database.php');
 $database = new LibraryDatabase();
 $db = $database->connect();
 
+//Select Table
 $query = "SELECT * FROM `nestedqueryunion`";
+
 //blog post query
 $stmt = $db->prepare($query);
- // $stmt->bindParam(1, $this->id);
- $stmt->execute();
- $num = $stmt->rowCount();
+$stmt->execute();
+$num = $stmt->rowCount();
 if ($num > 0) {
     $member_arr = array();
     $member_arr['data'] = array();
@@ -37,21 +33,16 @@ if ($num > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
-
+        // Select required rows to be displayed for view 5
         $member_item = array(
              'Members_Id' => $Members_Id,
         );
   echo "<tr><td>".$Members_Id."</td></tr>";
-// // echo $row["Members_Id"];
-//         //push data
-//        array_push($member_arr['data'], $member_item);
+
     }
-//     //turn to json & output
-//     echo json_encode($member_arr);
+
 } else {
-    // echo json_encode(
-    //     array("message" => 'No posts Found')
-    // );
+
     echo "<h1>There are 0 rows</h1>";
 }
 
