@@ -54,6 +54,7 @@ function updatemenu() {//updates the menu
                             </li>
                             <li><a href="../views/booklist.php">Book List</a></li>
                             <li> <a href="../views/librarylist.php">Visit Us</a></li>
+                            <li> <a href="../views/update.php">Update</a></li>
                             <li> <a href="../views/signin.php">Sign-out</a></li>
                         </ul>
                 </div>

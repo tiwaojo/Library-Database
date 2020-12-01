@@ -1,17 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
 
-include('../config/Database.php');
+include_once('../config/Database.php');
 
 
 //instantiate and connect to DB
 $database = new LibraryDatabase();
 $conn = $database->connectsqli();// Create connection
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+
 //sql statement to select columns from author table
 $sql = "SELECT ISBN, Book_Title, Author_Id, Genre_Id FROM book";
 //executes statement
