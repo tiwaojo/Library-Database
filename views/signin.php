@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
 
-        <!-- FOnts -->
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
             href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@700&family=Roboto&display=swap"
@@ -38,23 +38,23 @@
             <div class="centered-pos"><h1 class="acc-header " style="padding: 0;">
                 Login here
             </h1>
-                <form class="" action="login.php" method="post">
+                <form class="" action="login.php" method="post"><!-- login page selected and method set as post-->
 
                     <div class="form-group">
-                        <input type="text" name="email" placeholder="Email Address" class="form-control" required>
+                        <input type="text" name="email" placeholder="Email Address" class="form-control" required><!--textfield for entering email-->
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                        <input type="password" name="password" placeholder="Password" class="form-control" required><!--textfield for entering password -->
                     </div>
                     <br>
 
                     <div class="change-form">
                         <p id="" class="form-text text-muted">Don't have an account? Sign up <a
-                                href="signup.php">here</a>
+                                href="signup.php">here</a><!--link to signup page-->
                         </p>
                     </div>
                     <br>
-                    <button type="submit" class="btn" value="Submit">Submit</button>
+                    <button type="submit" class="btn" value="Submit">Submit</button><!-- Submit button -->
                 </form>
             </div>
         </div>
