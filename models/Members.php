@@ -3,8 +3,6 @@ class Members
 {
 
     // database connection and table name
-    // private $conn;
-    // private $table_name = "products";
     private $conn;
     private $table_name="members";
 
@@ -20,45 +18,37 @@ class Members
     public $M_Password;
 
 
-
+// constructor with $db as database connection
     public function __construct($db)
     {
         $this->conn=$db;
-        // $this->table_name;
     }
-
+ 
+    //reads and returns all members
     public function read()
     {
         //sql query to insert data
         $query="SELECT * FROM ".$this->table_name;
 
+        //prepare query for execution
         $stmt = $this->conn->prepare($query);
-
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
 
         // Execute query
         $stmt->execute();
-
         return $stmt;
     }
+
+    //reads and returns the members with requested Members_Id
     public function readId($id)
     {
-        //sql query to insert data
-        $query="SELECT * FROM ".$this->table_name." WHERE $Members_Id = ".$id;
+             //sql query to select all data from members table with matching id
+        $query="SELECT * FROM ".$this->table_name." WHERE $this->Members_Id = ".$id;
 
+        //prepare the query for execution
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
-
-        // Execute query
+        // Execute and return results
         $stmt->execute();
-        return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
+        return $stmt;        
     }
 }

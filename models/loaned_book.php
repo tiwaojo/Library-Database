@@ -3,8 +3,6 @@ class loaned_book
 {
 
     // database connection and table name
-    // private $conn;
-    // private $table_name = "products";
     private $conn;
     private $table_name="loaned_book";
 
@@ -15,13 +13,13 @@ class loaned_book
     public $Loan_Status;
     public $Due_Date;
 
-
+    // constructor with $db as database connection
     public function __construct($db)
     {
         $this->conn=$db;
-        // $this->table_name;
     }
 
+    //reads an returns all loaned_book
     public function read()
     {
         //sql query to insert data
@@ -29,41 +27,22 @@ class loaned_book
 
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
+        // Execute query
+        $stmt->execute();
+        return $stmt;
+    }
+
+    //reads and returns the loaned_book with requested loan_Id
+    public function readId($id)
+    {
+        //sql query to insert data
+        $query="SELECT * FROM ".$this->table_name." WHERE Loan_Id = ".$id;
+
+        //prepare the query for execution
+        $stmt = $this->conn->prepare($query);
 
         // Execute query
         $stmt->execute();
-
         return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
     }
-    public function readId($id){
-      //sql query to insert data
-      $query="SELECT * FROM ".$this->table_name." WHERE Loan_Id = ".$id;
-
-      $stmt = $this->conn->prepare($query);
-
-      // Bind ID
-      // $stmt->bindParam(1, $this->id);
-
-      // Execute query
-      $stmt->execute();
-
-      return $stmt;
-
-    }
-
-    //constructor
-
-    // TODO Create queries to get data here
-
-    // // constructor with $db as database connection
-    // public function __construct($db){
-    //     $this->conn = $db;
-    // }
 }

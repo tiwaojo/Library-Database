@@ -3,68 +3,43 @@ class Genre
 {
 
     // database connection and table name
-    // private $conn;
-    // private $table_name = "products";
     private $conn;
     private $table_name="genre";
 
     public $Genre_Id;
     public $Genre_Name;
 
-
-
-
+    // constructor with $db as database connection
     public function __construct($db)
     {
         $this->conn=$db;
-        // $this->table_name;
     }
-
+    
+    //reads and returns all genres
     public function read()
     {
-        //sql query to insert data
+        //sql query to select all data from gnere table
         $query="SELECT * FROM ".$this->table_name;
 
+        //prepare the query for execution
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
-
-        // Execute query
+        // Execute and return queryresults
         $stmt->execute();
-
         return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
     }
+
+    //reads and returns the genres with requested genre_Id
     public function readId($id)
     {
-        //sql query to insert data
+        //sql query to select all data from genre table with matching id
         $query="SELECT * FROM ".$this->table_name." WHERE Genre_Id = ".$id;
 
+        //prepare the query for execution
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
-
-        // Execute query
+        // Execute and return query results
         $stmt->execute();
         return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
     }
-    //constructor
-
-    // TODO Create queries to get data here
-
-    // // constructor with $db as database connection
-    // public function __construct($db){
-    //     $this->conn = $db;
-    // }
 }

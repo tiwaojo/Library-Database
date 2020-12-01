@@ -3,11 +3,10 @@ class Books
 {
 
     // database connection and table name
-    // private $conn;
-    // private $table_name = "products";
     private $conn;
     private $table_name="book";
 
+    // object properties
     public $ISBN;
     public $Book_Title;
     public $Publisher_Id;
@@ -16,59 +15,35 @@ class Books
     public $Author_Id;
 
 
-
+// constructor with $db as database connection
     public function __construct($db)
     {
-        $this->conn=$db;
-        // $this->table_name;
+        $this->conn=$db;        
     }
 
+    //reads and returns all books
     public function read()
     {
-        //sql query to insert data
+        //sql query to select all data from book table
         $query="SELECT * FROM ".$this->table_name;
 
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
-
-        // Execute query
+        // Execute and return results
         $stmt->execute();
-
-        return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
+        return $stmt;       
     }
+
+    //reads and returns a resquested book 
     public function readId($id)
     {
-        //sql query to insert data
+        //sql query to select all data from book table with matching id
         $query="SELECT * FROM ".$this->table_name." WHERE ISBN = ".$id;
 
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
-        $stmt->bindParam(1, $this->id);
-
-        // Execute query
+        // Execute and return results
         $stmt->execute();
         return $stmt;
-        //   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //   // set properties
-    //   $this->id = $row['id'];
-    //   $this->name = $row['name'];
     }
-
-    //constructor
-
-    // TODO Create queries to get data here
-
-    // // constructor with $db as database connection
-    // public function __construct($db){
-    //     $this->conn = $db;
-    // }
 }
