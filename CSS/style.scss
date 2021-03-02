@@ -1,4 +1,3 @@
-
 // @import "./_navstyle";
 
 .left-rec {
@@ -70,7 +69,7 @@
     .form-group-row {
       column-count: 2;
       display: flex;
-
+      
       .form-group-column {
         // display: block;
         // justify-content: space-around;
@@ -79,7 +78,6 @@
     }
 
     .change-form {
-
       p {
         //   height: 20px;
         // width: 290px;
@@ -95,7 +93,9 @@
         }
       }
     }
-    input, select {
+
+    input,
+    select {
       box-sizing: border-box;
       // border: 2px solid #182231;
       border: none;
@@ -105,11 +105,10 @@
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
       padding: 10px;
       margin: 10px 10px 10px 0;
-  
+
       &:focus {
         border: 4px solid #215AAE;
       }
-    
     }
   }
 
@@ -122,16 +121,12 @@
     padding-left: 15%;
     text-align: left;
   }
-
-
-  
 }
 
 
 h3.lib-message {
   height: 80px;
   width: 390px;
-
   //   font-family: "Arial Rounded MT Bold";
   font-size: 34px;
   line-height: 39px;
@@ -147,8 +142,6 @@ h4.library {
   line-height: 43px;
   text-align: center;
 }
-
-
 
 .acc-login-new {
   height: 2.63%;
@@ -180,7 +173,8 @@ div .group-people {
   font-size: 18px;
   line-height: 20px;
   transition: width 0.5s, height 0.5s transform 1.5s;
-  &:hover{
+
+  &:hover {
     font-size: 20px;
     // height: 50px;
     // width: 290px;   
