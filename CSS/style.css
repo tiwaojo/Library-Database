@@ -82,7 +82,8 @@
   color: #215AAE;
 }
 
-.right-rec form input, .right-rec form select {
+.right-rec form input,
+.right-rec form select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -95,7 +96,8 @@
   margin: 10px 10px 10px 0;
 }
 
-.right-rec form input:focus, .right-rec form select:focus {
+.right-rec form input:focus,
+.right-rec form select:focus {
   border: 4px solid #215AAE;
 }
 

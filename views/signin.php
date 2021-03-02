@@ -8,9 +8,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-            href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@700&family=Roboto&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@700&family=Roboto&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
         <title>Sign in</title>
@@ -35,22 +33,26 @@
                 <img class="group-people" src="../Images\community.svg" alt="group" style="width:40%">
             </div>
 
-            <div class="centered-pos"><h1 class="acc-header " style="padding: 0;">
-                Login here
-            </h1>
-                <form class="" action="login.php" method="post"><!-- login page selected and method set as post-->
+            <div class="centered-pos">
+                <h1 class="acc-header " style="padding: 0;">
+                    Login here
+                </h1>
+                <form class="" action="login.php" method="post">
+                    <!-- login page selected and method set as post-->
 
                     <div class="form-group">
-                        <input type="text" name="email" placeholder="Email Address" class="form-control" required><!--textfield for entering email-->
+                        <input type="text" name="email" placeholder="Email Address" class="form-control" required>
+                        <!--textfield for entering email-->
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" class="form-control" required><!--textfield for entering password -->
+                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                        <!--textfield for entering password -->
                     </div>
                     <br>
 
                     <div class="change-form">
-                        <p id="" class="form-text text-muted">Don't have an account? Sign up <a
-                                href="signup.php">here</a><!--link to signup page-->
+                        <p id="" class="form-text text-muted">Don't have an account? Sign up <a href="signup.php">here</a>
+                            <!--link to signup page-->
                         </p>
                     </div>
                     <br>
