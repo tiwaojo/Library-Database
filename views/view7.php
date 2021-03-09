@@ -1,11 +1,11 @@
 <!-- This contains the methods for views -->
 <?php
 header("Access-Control-Allow-Orgin: *");
-include('header.php');
+include_once('../index.php');
 include('../models/Employees.php');
 include('../config/Database.php'); ?>
 
-<div class="content-area">
+<div id="content-area">
     <h2>View 7</h2>
     <table>
         <tr id="table-header">

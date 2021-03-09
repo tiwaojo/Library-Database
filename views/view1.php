@@ -2,12 +2,13 @@
 <?php
 
 header("Access-Control-Allow-Orgin: *");
-include('header.php');
+//header("Content-type: application/json");
+include_once('../index.php');
 include('../models/Members.php');
 include('../config/Database.php');
 ?>
 
-<div class="content-area">
+<div id="content-area">
     <h2>Members with due books</h2>
     <table>
         <tr id="table-header">

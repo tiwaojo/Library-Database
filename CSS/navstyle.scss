@@ -103,8 +103,7 @@ nav {
 	}
 }
 
-.content-area {
-
+#content-area {
 	h2 {
 		letter-spacing: 4px;
 		padding-top: 30px;
@@ -270,13 +269,13 @@ nav {
 
 	#menu ul {
 		background: #111;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		left: 0;
+		// position: absolute;
+		// top: 100%;
+		// right: 0;
+		// left: 0;
 		z-index: 3;
 		height: auto;
-		display: none
+		// display: inline-flex
 	}
 
 	#menu ul.sub-menus {
@@ -294,19 +293,19 @@ nav {
 		width: auto;
 	}
 
-	#menu input {
-		z-index: 0
-	}
+	// #menu input {
+	// 	z-index: 0
+	// }
 
-	#menu button:active {
-		color: white
-	}
+	// #menu button:active {
+	// 	color: white
+	// }
 
-	#menu input:checked+label:before {
-		content: "\00d7"
-	}
+	// #menu input:checked+label:before {
+	// 	content: "\00d7"
+	// }
 
-	#menu button:active~ul {
-		display: block
-	}
+	// #menu button:active~ul {
+	// 	display: block
+	// }
 }

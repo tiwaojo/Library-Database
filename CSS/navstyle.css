@@ -96,7 +96,7 @@ nav .dropdown-views a {
   text-align: start;
 }
 
-.content-area h2 {
+#content-area h2 {
   letter-spacing: 4px;
   padding-top: 30px;
   font-size: 50px;
@@ -104,7 +104,7 @@ nav .dropdown-views a {
   font-family: 'Roboto', sans-serif;
 }
 
-.content-area table {
+#content-area table {
   margin: 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,7 +119,7 @@ nav .dropdown-views a {
   padding: 2%;
 }
 
-.content-area table #table-header {
+#content-area table #table-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 44px;
@@ -133,11 +133,11 @@ nav .dropdown-views a {
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.content-area table #table-header th {
+#content-area table #table-header th {
   padding: 8px;
 }
 
-.content-area table tr {
+#content-area table tr {
   height: 64px;
   width: 50px;
   color: #555D6C;
@@ -153,7 +153,7 @@ nav .dropdown-views a {
   transition: width 0.5s, height 0.5s transform 1.5s;
 }
 
-.content-area table tr:hover {
+#content-area table tr:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   border-radius: 8px;
@@ -161,18 +161,18 @@ nav .dropdown-views a {
   border: 6px solid #68B0F0;
 }
 
-.content-area #responsive-menu {
+#content-area #responsive-menu {
   background-color: transparent;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   border: none;
 }
 
-.content-area #responsive-menu img {
+#content-area #responsive-menu img {
   height: 15vw;
 }
 
-.content-area form #search-input {
+#content-area form #search-input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -184,11 +184,11 @@ nav .dropdown-views a {
   margin: 10px 10px 10px 0;
 }
 
-.content-area form #search-input:focus {
+#content-area form #search-input:focus {
   border: 4px solid #215AAE;
 }
 
-.content-area form #submit-search {
+#content-area form #submit-search {
   height: 30px;
   width: 30px;
   border-radius: 10px;
@@ -249,13 +249,8 @@ nav .dropdown-views a {
   }
   #menu ul {
     background: #111;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
     z-index: 3;
     height: auto;
-    display: none;
   }
   #menu ul.sub-menus {
     width: 100%;
@@ -268,18 +263,6 @@ nav .dropdown-views a {
     display: block;
     float: none;
     width: auto;
-  }
-  #menu input {
-    z-index: 0;
-  }
-  #menu button:active {
-    color: white;
-  }
-  #menu input:checked + label:before {
-    content: "\00d7";
-  }
-  #menu button:active ~ ul {
-    display: block;
   }
 }
 /*# sourceMappingURL=navstyle.css.map */

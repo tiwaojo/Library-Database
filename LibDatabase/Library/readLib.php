@@ -1,5 +1,5 @@
 
-<div class="content-area">
+<div id="content-area">
     <h2>Display all Libraries</h2>
 
 <?php

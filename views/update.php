@@ -1,5 +1,5 @@
 <?php
-include_once("header.php");
+include_once('../index.php');
 // Establish Database connection
 include_once('../config/Database.php');
 include_once('../LibDatabase\Author\AuthorRead.php');
