@@ -1,12 +1,12 @@
 <!-- This contains the methods for views -->
 <?php
-include('header.php');
+include_once('../index.php');
 include('../models/Members.php');
 include('../models/loaned_book.php');
 include('../config/Database.php'); ?>
 
 
-<div class="content-area">
+<div id="content-area">
     <h2>View 8 </h2>
 
         <?php

@@ -20,14 +20,14 @@ class LibraryDatabase
         $this->user="root";
         //  $this->password="admin";//Tanzir
         // $this->dbname="librarydatabase";//Tanzir
-        // $this->password="admin";//Tiwa
-        // $this->dbname="libdatabase";//Tiwa
+        $this->password="admin";//Tiwa
+        $this->dbname="libdatabase";//Tiwa
         // $this->password="admin";//aaditya
         // $this->dbname="librarydb"; //aaditya
         // $this->password="qwer1234";//Aryan
         // $this->dbname="librarydatabase"; //Aryan
-        $this->password="";//new user
-        $this->dbname=""; //new user
+        // $this->password="";//new user
+        // $this->dbname=""; //new user
 
 
         try {
@@ -45,14 +45,14 @@ class LibraryDatabase
         $username = "root";
         // $password="tarzan114";//Tanzir
         // $dbname="librarydatabase";//Tanzir
-        // $password="admin";//Tiwa
-        // $dbname="libdatabase";//Tiwa
+        $password="admin";//Tiwa
+        $dbname="libdatabase";//Tiwa
         // $password="admin";//aaditya
         // $dbname="librarydb"; //aaditya
         // $password="qwer1234";//Aryan
         // $dbname="librarydatabase"; //Aryan
-        $password="";//new user
-        $dbname=""; //new user
+        // $password="";//new user
+        // $dbname=""; //new user
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);

@@ -2,11 +2,11 @@
 <?php
 
 header("Access-Control-Allow-Orgin: *");
-include('header.php');
+include_once('../index.php');
 include('../models/Members.php');
 include('../config/Database.php'); ?>
 
-<div class="content-area">
+<div id="content-area">
     <h2>View 4</h2>
 
 

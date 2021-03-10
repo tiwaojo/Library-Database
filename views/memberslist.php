@@ -6,7 +6,7 @@ include_once("header.php");
 <div class="Title">
     <h2>Display all members</h2><!-- table displays all members in database-->
 </div>
-<div class="content-area">
+<div id="content-area">
     <table>
         <tr>
             <th>Id</th>

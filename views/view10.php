@@ -1,7 +1,7 @@
 <!-- Similar to booklist in navbar. readbooks.php & Books dir in LibDatabase has been removed  -->
 <?php
 header("Access-Control-Allow-Orgin: *");
-include('header.php');
+include_once('../index.php');
 include('../models/Employees.php');
 include('../config/Database.php');
 
@@ -11,7 +11,7 @@ $database = new LibraryDatabase();
   $conn = $database->connectsqli(); ?>
 
 
-<div class="content-area">
+<div id="content-area">
     <h2>View 10</h2>
 
 
