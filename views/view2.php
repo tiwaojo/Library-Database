@@ -9,47 +9,38 @@ include('../config/Database.php'); ?>
 
 <div class="content-area">
     <h2>View 2</h2>
-    <table>
-        <tr id="table-header">
-            <th>Library Name</th>
-            <th>Number of Employees</th>
-        </tr>
+
+
 
         <?php
 
         //instantiate and connect to DB
         $database = new LibraryDatabase();
-        $db = $database->connect();
+      $conn = $database->connectsqli();
 
         //Select Table
-        $query = "SELECT * FROM `view 2`";
+        $sql = "SELECT * FROM `view 2`";
 
-        $stmt = $db->prepare($query);
-        $stmt->execute();
+      $result = $conn->query($sql);
+      if (!$result) {
+          trigger_error('Invalid query: ' . $conn->error);
+      }
 
         //blog post query
 
         //get row count
-        $num = $stmt->rowCount();
-        if ($num > 0) {
-            $employees_arr = array();
-            $employees_arr['data'] = array();
-
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
-
-                // Select required rows to be displayed for view 2
-
-                $employees_item = array(
-                    'Library_Name' => $Library_Name,
-                    'NumberOfEmployees' => $NumberOfEmployees,
-                );
-                echo "<tr><td>" . $Library_Name . "</td><td>" . $NumberOfEmployees . "</td></tr>";
-            }
+        if ($result->num_rows > 0) {
+          echo "<table><tr><th>Library Name</th><th>Number of Employees</th></tr>";
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["Library_Name"]."</td><td>".$row["NumberOfEmployees"]."</td></tr>";
+          }
+          echo "</table>";
         } else {
-            echo "<h1>There are 0 rows</h1>";
+          echo "0 results";
         }
+        $conn->close();
         ?>
-    </table>
+
 </div>
 </body>
