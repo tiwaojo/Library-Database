@@ -8,46 +8,34 @@ include('../config/Database.php'); ?>
 
 <div class="content-area">
     <h2>View 8 </h2>
-    <table>
-
-        <tr id="table-header">
-            <th>Member ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
 
         <?php
 
         //instantiate and connect to DB
         $database = new LibraryDatabase();
-        $db = $database->connect();
+          $conn = $database->connectsqli();
 
         //Select Table
-        $query = "SELECT * FROM `memberloaned`";
+        $sql = "SELECT * FROM `memberloaned`";
 
-        $stmt = $db->prepare($query);
-
-        $stmt->execute();
-        $num = $stmt->rowCount();
-        if ($num > 0) {
-            $member_arr = array();
-            $member_arr['data'] = array();
-
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
-
-                // Select required rows to be displayed for view 8
-                $member_item = array(
-                    'Members_Id' => $Members_Id,
-                    'M_Fname' => $M_Fname,
-                    'M_LName' => $M_LName,
-                );
-                echo "<tr><td>" . $Members_Id . "</td><td>" . $M_Fname . "</td><td>" . $M_LName . "</td></tr>";
-            }
+        $result = $conn->query($sql);
+        if (!$result) {
+            trigger_error('Invalid query: ' . $conn->error);
+        }//if statement stating that its a connection error
+        //if table is there then it will echo a table for some book variables
+        if ($result->num_rows > 0) {
+          echo "<table><tr><th>Member ID </th><th> First Name </th><th> Last Name</th></tr>";
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["Members_Id"]."</td><td>".$row["M_Fname"]."</td><td> ".$row["M_LName"]."</td></tr>";
+          }
+          echo "</table>";
         } else {
-            echo "<h1>There are 0 rows</h1>";
+          echo "0 results";
         }
+        $conn->close();
+
         ?>
-    </table>
+
 </div>
 </body>
