@@ -6,47 +6,34 @@ include('../config/Database.php'); ?>
 
 <div class="content-area">
     <h2>View 6</h2>
-    <table>
-        <tr id="table-header">
-            <th>ISBN</th>
-            <th>Book</th>
-            <th>Genre</th>
-        </tr>
+
 
         <?php
         //instantiate and connect to DB
         $database = new LibraryDatabase();
-        $db = $database->connect();
+        $conn = $database->connectsqli();
 
         //Select Table
-        $query = "SELECT * FROM `find all horror books`";
+        $sql = "SELECT * FROM `find all horror books`";
 
-        $stmt = $db->prepare($query);
-        $stmt->execute();
-
-        //blog post query
-        //get row count
-        $num = $stmt->rowCount();
-        if ($num > 0) {
-            $view_arr = array();
-            $view_arr['data'] = array();
-
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
-
-                // Select required rows to be displayed for view 6
-                $view_item = array(
-                    'ISBN' => $ISBN,
-                    'Book_Title' => $Book_Title,
-                    'Genre_Name' => $Genre_Name,
-                );
-                echo "<tr><td>" . $ISBN . "</td><td>" . $Book_Title . "</td><td>" . $Genre_Name . "</td></tr>";
-            }
+        $result = $conn->query($sql);
+        if (!$result) {
+            trigger_error('Invalid query: ' . $conn->error);
+        }//if statement stating that its a connection error
+        //if table is there then it will echo a table for some book variables
+        if ($result->num_rows > 0) {
+          echo "<table><tr><th>Book Title</th><th>ISBN</th><th>Genre Name</th></tr>";
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["Book_Title"]."</td><td>".$row["ISBN"]."</td><td> ".$row["Genre_Name"]."</td></tr>";
+          }
+          echo "</table>";
         } else {
-
-            echo "<h1>There are 0 rows</h1>";
+          echo "0 results";
         }
+        $conn->close();
+
         ?>
-    </table>
+
 </div>
 </body>
