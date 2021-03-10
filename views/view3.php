@@ -9,13 +9,7 @@ include('../config/Database.php'); ?>
 
 <div class="content-area">
     <h2>View 3</h2>
-    <table>
 
-        <tr id="table-header">
-            <th>Employee ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
 
 
         <?php
@@ -23,39 +17,29 @@ include('../config/Database.php'); ?>
 
         //instantiate and connect to DB
         $database = new LibraryDatabase();
-        $db = $database->connect();
+        $conn = $database->connectsqli();
 
 
-        //Select Table
-        $query = "SELECT * FROM `view_3`";
 
-        $stmt = $db->prepare($query);
+        $sql = "SELECT * FROM `view_3`";
 
-        $stmt->execute();
-
-        //blog post query
-
-        //get row count
-        $num = $stmt->rowCount();
-        if ($num > 0) {
-            $employees_arr = array();
-            $employees_arr['data'] = array();
-
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
-
-                // Select required rows to be displayed for view 3
-                $employees_item = array(
-                    'Employees_Id' => $Employees_Id,
-                    'E_FName' => $E_FName,
-                    'E_LName' => $E_LName,
-                );
-                echo "<tr><td>" . $Employees_Id . "</td><td>" . $E_FName . "</td><td>" . $E_LName . "</td></tr>";
-            }
+        $result = $conn->query($sql);
+        if (!$result) {
+            trigger_error('Invalid query: ' . $conn->error);
+        }//if statement stating that its a connection error
+        //if table is there then it will echo a table for some book variables
+        if ($result->num_rows > 0) {
+          echo "<table><tr><th>Employee First Name</th><th>Employee Last Name</th><th>Employees ID</th></tr>";
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["E_FName"]."</td><td>".$row["E_LName"]."</td><td> ".$row["Employees_Id"]."</td></tr>";
+          }
+          echo "</table>";
         } else {
-            echo "<h1>There are 0 rows</h1>";
+          echo "0 results";
         }
+        $conn->close();
         ?>
-    </table>
+
 </div>
 </body>
