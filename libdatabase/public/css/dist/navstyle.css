@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+body {
+  text-align: center;
+}
+
+.wrapper {
+  margin: 14px;
+}
+
+header {
+  color: #333;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  float: right;
+  line-height: 60px;
+}
+nav a {
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 20px;
+  color: #333;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+nav .views {
+  float: left;
+  overflow: hidden;
+  line-height: 100px;
+}
+nav .views .dropbtn {
+  text-decoration: none;
+  font-family: poppins;
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin: 0 10px;
+  background: #262626;
+  color: #fff;
+  border: none;
+}
+nav .dropdown-views {
+  line-height: 50px;
+  display: none;
+  position: absolute;
+}
+nav .dropdown-views a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin: 10px 10px;
+  color: #333;
+  background: #262626;
+  display: block;
+  text-align: left;
+}
+
+.views:hover .dropdown-views {
+  display: block;
+}
+
+.Title {
+  height: 100vh;
+  background-color: #F2F2F2;
+}
+.Title img {
+  height: 75vh;
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+}
+.Title h2 {
+  font-size: 6vw;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  color: #333;
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  text-align: start;
+}
+
+.content-area h2 {
+  letter-spacing: 4px;
+  padding-top: 30px;
+  font-size: 50px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.content-area table {
+  margin: 5vw;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #1B427D;
+  border-collapse: collapse;
+  margin: 2% 2% 20% 40%;
+  border-radius: 8px;
+  padding: 2%;
+}
+.content-area table #table-header {
+  box-sizing: border-box;
+  height: 44px;
+  width: 724px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.content-area table #table-header th {
+  padding: 8px;
+}
+.content-area table tr {
+  height: 64px;
+  width: 50px;
+  color: #555D6C;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  border: none;
+  line-height: 16px;
+  box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.1);
+  transition: width 0.5s, height 0.5s transform 1.5s;
+}
+.content-area table tr:hover {
+  transform: scale(1.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 6px solid #68B0F0;
+}
+.content-area #responsive-menu {
+  background-color: transparent;
+  transform: rotate(-90deg);
+  border: none;
+}
+.content-area #responsive-menu img {
+  height: 15vw;
+}
+
+#menu li {
+  display: inline;
+  position: relative;
+}
+#menu li a:hover {
+  color: #0099CC;
+  background: #F2F2F2;
+}
+#menu a {
+  display: inline-flex;
+  padding: 0 14px;
+}
+#menu a .dropdown-arrow:after {
+  content: "▾";
+  margin-left: 5px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  color: #1B427D;
+}
+#menu ul.sub-menus li {
+  display: inline-block;
+  justify-content: space-around;
+}
+#menu ul.sub-menus a {
+  font-size: 16px;
+}
+#menu ul.sub-menus a:hover {
+  background-color: #444444;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  #menu {
+    position: static;
+  }
+
+  #menu ul {
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: auto;
+    display: none;
+  }
+
+  #menu ul.sub-menus {
+    width: 100%;
+    position: static;
+  }
+
+  #menu ul.sub-menus a {
+    padding-left: 30px;
+  }
+
+  #menu li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+
+  #menu input,
+#menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  #menu input {
+    z-index: 0;
+  }
+
+  #menu button:active {
+    color: white;
+  }
+
+  #menu input:checked + label:before {
+    content: "×";
+  }
+
+  #menu button:active ~ ul {
+    display: block;
+  }
+}

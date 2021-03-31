@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\authorController;
+use App\Http\Controllers\authorsController;
+use App\Http\Controllers\bookController;
+use App\Http\Controllers\employeesController;
+use App\Http\Controllers\genreController;
+use App\Http\Controllers\libController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +20,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PagesController::class,'home']);
+
+// Route::get('/book', [bookController::class,'index']);
+// Route::get('/employees', [employeesController::class,'index']);
+
+// Route::get('/genre', [genreController::class,'index']);
+// Route::get('/library', [libController::class,'index']);
+// Route::get('/author', [authorsController::class,'index']);
+
+Route::resource('book', bookController::class);
+Route::resource('employees', employeesController::class);
+Route::resource('genre', genreController::class);
+Route::resource('library', libController::class);
+Route::resource('author', authorsController::class);
+

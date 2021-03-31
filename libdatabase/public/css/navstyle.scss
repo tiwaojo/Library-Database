@@ -1,0 +1,295 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+body {
+	text-align: center;
+}
+
+.wrapper {
+	// width: 1170px;
+	margin: 14px;
+}
+
+header {
+	// height: 100px;
+	color: #333;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+	top: 0;
+}
+
+nav {
+	float: right;
+	line-height: 60px;
+	// overflow: hidden;
+
+	a {
+		text-decoration: none;
+		letter-spacing: 4px;
+		font-size: 20px;
+		color: #333;
+		color: #333;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.views {
+		float: left;
+		overflow: hidden;
+		line-height: 100px;
+
+		.dropbtn {
+			text-decoration: none;
+			font-family: poppins;
+			letter-spacing: 4px;
+			font-size: 20px;
+			margin: 0 10px;
+			background: #262626;
+			color: #fff;
+			border: none;
+		}
+	}
+
+
+	.dropdown-views {
+		line-height: 50px;
+		display: none;
+		position: absolute;
+
+		a {
+			text-decoration: none;
+			font-family: 'Roboto', sans-serif;
+			letter-spacing: 4px;
+			font-size: 20px;
+			margin: 10px 10px;
+			color: #333;
+			background: #262626;
+			display: block;
+			text-align: left;
+		}
+
+	}
+}
+
+.views:hover .dropdown-views {
+	display: block;
+}
+
+.Title {
+	height: 100vh;
+	background-color: #F2F2F2;
+
+	// background-attachment: fixed;
+	img {
+		height: 75vh;
+		min-height: 10em;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	h2 {
+		font-size: 6vw;
+		font-family: 'Nunito', sans-serif;
+		text-transform: uppercase;
+		color: #333;
+		position: absolute;
+		top: 65%;
+		left: 60%;
+		text-align: start;
+		// line-height: 120px;
+	}
+}
+
+.content-area {
+	
+	h2 {		
+		letter-spacing: 4px;
+		padding-top: 30px;
+		font-size: 50px;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	table {
+		margin: 5vw;
+		display: flex;
+		justify-content: flex-end;
+		background-color: #1B427D;
+		border-collapse: collapse;
+		margin: 2% 2% 20% 40%;
+		border-radius: 8px;
+		padding: 2%;
+
+		#table-header {
+			box-sizing: border-box;
+			height: 44px;
+			width: 724px;
+			border-radius: 8px;
+			background-color: #fff;
+			color: #333;
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 700;
+			box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+			th {
+				padding: 8px;
+			}
+		}
+
+		tr {
+			height: 64px;
+			width: 50px;
+			color: #555D6C;
+			border-radius: 8px;
+			background-color: #fff;
+			font-family: 'Noto Sans JP', sans-serif;
+			// font-size: 12px;
+			font-weight: 700;
+			border: none;
+			line-height: 16px;
+			box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.1);
+			transition: width 0.5s, height 0.5s transform 1.5s;
+
+			&:hover {
+				transform: scale(1.1);
+				// background-color: #FFFFFF;
+				// z-index: 30;
+				// box-shadow: none;
+				border-radius: 8px;
+				background-color: #ffffff;
+				border: 6px solid #68B0F0;
+
+			}
+
+		}
+	}
+
+	#responsive-menu {
+		background-color: transparent;
+		transform: rotate(-90deg);
+		border: none;
+
+		img {
+			height: 15vw;
+		}
+
+	}
+}
+
+
+
+
+
+
+//From generated 
+
+#menu {
+	li {
+		display: inline;
+		position: relative;
+
+		a:hover {
+			color: #0099CC;
+			background: #F2F2F2;
+		}		
+	}
+
+	a {
+		display: inline-flex;
+		// line-height: 45px;
+		padding: 0 14px;
+		.dropdown-arrow:after {
+			content: "\25BE";
+			margin-left: 5px;
+		}
+	}
+
+	ul.sub-menus {
+		height: auto;
+		overflow: hidden;
+		position: absolute;
+		z-index: 99;
+		display: none;
+		color: #1B427D;
+		// left:0%;
+
+		li {
+			display: inline-block;
+			justify-content: space-around;
+		}
+
+		a {
+			// color: #1B427D;
+			font-size: 16px;
+
+			&:hover {
+				// background-color: #1B427D;
+				background-color: #444444;
+			}
+		}
+	}
+
+	li:hover ul.sub-menus {
+		display: block;
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	#menu {
+		position: static
+	}
+
+	#menu ul {
+		background: #111;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		z-index: 3;
+		height: auto;
+		display: none
+	}
+
+	#menu ul.sub-menus {
+		width: 100%;
+		position: static;
+	}
+
+	#menu ul.sub-menus a {
+		padding-left: 30px;
+	}
+
+	#menu li {
+		display: block;
+		float: none;
+		width: auto;
+	}
+
+	#menu input,
+	#menu label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block
+	}
+
+	#menu input {
+		z-index: 0
+	}
+
+	#menu button:active {
+		color: white
+	}
+
+	#menu input:checked+label:before {
+		content: "\00d7"
+	}
+
+	#menu button:active~ul {
+		display: block
+	}
+}
