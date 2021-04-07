@@ -1,2 +1,4 @@
 .vscode/settings.json
 config/Database.php
+vendor/
+composer.lock
