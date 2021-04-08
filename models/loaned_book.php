@@ -45,4 +45,7 @@ class loaned_book
         $stmt->execute();
         return $stmt;
     }
+    public function getLoanerBookDetails(){
+        return $this->ISBN. " ". $this->Loan_Id. " " .$this->Members_Id." " .$this->Loan_Status." ".$this->Due_Date;
+    }
 }
