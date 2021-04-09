@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-class bookTest extends TestCase{
+class loaned_bookTest extends TestCase{
     public function testReturnsbookName(){
         require "models/loaned_book.php";
         require "config/Database.php";
