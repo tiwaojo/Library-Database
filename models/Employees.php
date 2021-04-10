@@ -51,4 +51,8 @@ class Employee
         $stmt->execute();
         return $stmt;
     }
+
+    public function getEmployeeDetails(){
+        return $this->Employees_Id. " ". $this->E_FName. " " .$this->E_LName." " .$this->E_Email;
+    }
 }

@@ -45,4 +45,7 @@ class Author
         $stmt->execute();
         return $stmt;
     }
+    public function getAuthorDetails(){
+        return $this->Author_Id. " ". $this->A_FName. " " .$this->A_LName." " .$this->A_Country;
+    }
 }

@@ -46,4 +46,8 @@ class Books
         $stmt->execute();
         return $stmt;
     }
+
+    public function getFullBookDetails(){
+        return $this->Book_Title. " ". $this->ISBN. " " .$this->Publisher_Id." " .$this->Genre_Id." ".$this->Library_Id." " .$this->Author_Id;
+    }
 }
