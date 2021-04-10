@@ -21,7 +21,7 @@ $result =$mysqli->query("SELECT * FROM members WHERE M_Email= '".$M_Email."' AND
   // Else not correct, a message will be displayed for the user to try again
   if (mysqli_num_rows($result) == 1) {
 
-      header("Location: ../views/index.php");
+      header("Location: /Library-Database/index");
   }else{
     header("Location: ../views/signin.php?error=invalidfields=".$M_Email);
   }

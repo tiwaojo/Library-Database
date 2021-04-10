@@ -41,11 +41,11 @@
                     <!-- login page selected and method set as post-->
 
                     <div class="form-group">
-                        <input type="text" name="email" placeholder="Email Address" class="form-control" required>
+                        <input id="email" type="text" name="email" placeholder="Email Address" class="form-control" required>
                         <!--textfield for entering email-->
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                        <input id="password" type="password" name="password" placeholder="Password" class="form-control" required>
                         <!--textfield for entering password -->
                     </div>
                     <br>

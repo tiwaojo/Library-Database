@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 
   header('Access-Control-Allow-Methods: POST');
 
-
+  include_once('../index.php');
 
 include_once('../config/Database.php');
 
@@ -16,7 +16,9 @@ $conn = $database->connectsqli();
 
 $Book_Title=isset($_POST['search'])?$_POST['search']:die("Error: The data you have requested is not available ");
 
-
+?>
+<div id="content-area">
+<?php
 
 //if password field is empty fill the email field again and remove the password
 $result =$conn->query("SELECT * FROM book WHERE Book_Title= '".$Book_Title."' ");
@@ -38,3 +40,4 @@ echo "</table>";
 
 
   ?>
+</div>

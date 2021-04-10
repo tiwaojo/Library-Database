@@ -7,6 +7,14 @@ In order to execute this file please
 4. Assuming no default setting have been changed you should be able to access the website from [here](http://localhost/Library-Database/views/signin.php)
 5. Navigate as you would any website
 
+## Testing
+#### Tools used: Selenium, Composer, PHPUnit
+
+1. Download composer from [here](https://getcomposer.org/Composer-Setup.exe)
+2. Run `composer require` then `composer dump-autoload -o` in the Library-Database directory to set up your environment. This will use the composer.json file included to install the required pachages
+3. Navigate to the [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) website to get the  latest stable chrome driver version. Download and extract to a new directory called selenium. This directorys parent should be the Library-Database.
+4. Open a terminal and `.\selenium\chromedriver --port=4444`
+5. Open another terminal and run `./vendor/bin/phpunit ./tests/<testfile>.php`. Include `--filter <testMethod>` before `./tests/<testfile>.php` to test specific methods
 
 ## NOTES when looking at the files:
 1. Primary focus of files are in the views

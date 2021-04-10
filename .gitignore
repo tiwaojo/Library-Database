@@ -3,3 +3,4 @@ config/Database.php
 vendor/
 composer.lock
 *.cache
+selenium/*

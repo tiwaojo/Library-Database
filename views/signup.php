@@ -69,7 +69,7 @@
 
                     <div class="form-group-column">
                         <h4>Birth Date</h4><!--Date/month to set Birthdate-->
-                        <input type="date" name="bdate" max="1970-12-31" placeholder="BirthDate" class="form-control"
+                        <input type="date" name="bdate" max="2070-12-31" placeholder="BirthDate" class="form-control"
                             required>
                     </div>
                 </div>
