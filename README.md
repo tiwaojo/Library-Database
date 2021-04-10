@@ -11,7 +11,8 @@ In order to execute this file please
 5. in the terminal of the libdatabase folder, run composer install will make sure to download all the dependencies
 6. run php artisan key:generate to generate a key to your .env file
 7. run composer install
-8. also for the authentication run php artisan migrate to make the user table in the lib database
+8. goto what the localhost that it has saved
+10. also for the authentication run php artisan migrate to make the user table in the lib database
 
 
 
