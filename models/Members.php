@@ -51,6 +51,7 @@ class Members
         $stmt->execute();
         return $stmt;        
     }
+    //string statement of the details of members
     public function getMemberDetails(){
         return $this->Members_Id. " ". $this->M_FName. " " .$this->M_LName." " .$this->M_Email;
     }
