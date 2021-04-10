@@ -51,4 +51,7 @@ class Members
         $stmt->execute();
         return $stmt;        
     }
+    public function getMemberDetails(){
+        return $this->Members_Id. " ". $this->M_FName. " " .$this->M_LName." " .$this->M_Email;
+    }
 }
