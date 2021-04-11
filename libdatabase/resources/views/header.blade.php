@@ -37,24 +37,15 @@
                     <!--All headers at top of page-->
                     <ul>
                         <a href="/">Home</a>
-                        <!-- <li><a class='dropbtn'>Views</a>
+                        <li><a class='dropbtn'>Views</a>
                             <ul class='sub-menus'>
-                                <li><a href='view1.php'>Views 1</a></li>
-                                <li><a href='view2.php'>Views 2</a></li>
-                                <li><a href='view3.php'>Views 3</a></li>
-                                <li><a href='view4.php'>Views 4</a></li>
-                                <li><a href='view5.php'>Views 5</a></li>
-                                <li><a href='view6.php'>Views 6</a></li>
-                                <li><a href='view7.php'>Views 7</a></li>
-                                <li><a href='view8.php'>Views 8</a></li>
-                                <li><a href='view9.php'>Views 9</a></li>
-                                <li><a href='view10.php'>Views 10</a></li>
+                                <li><a href='/author'>Author</a></li>
+                                <li><a href='/book'>Book</a></li>
                             </ul>
-                        </li> -->
-                        <li> <a href="/member_search">Search</a></li>
+                        </li> 
                         <!-- <li> <a href="../views/readLib.php">Library List</a></li> -->
                         <!-- <li> <a href="../views/update.php#inputfield">Update</a></li> -->
-                        <li> <a href="/signin">Sign-in</a></li>
+                        <li> <a href="/LogIn">Sign-in</a></li>
                         
                     </ul>
                 </div>

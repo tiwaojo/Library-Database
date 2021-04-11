@@ -2,8 +2,11 @@
 <div class="content-area">
     <h2>Author</h2>
     @if (count($authors)==0)
-        <h1>error fetching data</h1>  
+        <h1>error fetching data</h1> 
     @endif
+    {{-- @if (count($LogInfo)>0)
+        <h1>fetching data</h1> 
+    @endif --}}
     <table>
 
         <tr id="table-header">

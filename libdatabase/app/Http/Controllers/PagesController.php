@@ -12,30 +12,40 @@ class PagesController extends Controller
         # code...
         return view('index');
     }
-    public function book()
+    // public function book()
+    // {
+    //     # code...
+    //     return view('book');
+    // }
+    // public function employees()
+    // {
+    //     # code...
+    //     return view('employees');
+    // }
+    // public function genre()
+    // {
+    //     # code...
+    //     return view('genre');
+    // }
+    // public function author()
+    // {
+    //     # code...
+    //     return view('author');
+    // }
+    // public function library()
+    // {
+    //     # code...
+    //     return view('lib');
+    // }
+    public function signin()
     {
         # code...
-        return view('book');
+        return view('signin');
     }
-    public function employees()
+    public function signup()
     {
         # code...
-        return view('employees');
-    }
-    public function genre()
-    {
-        # code...
-        return view('genre');
-    }
-    public function author()
-    {
-        # code...
-        return view('author');
-    }
-    public function library()
-    {
-        # code...
-        return view('lib');
+        return view('signup');
     }
 
 }

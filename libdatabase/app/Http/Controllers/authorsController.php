@@ -43,6 +43,26 @@ class authorsController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'A_FName'=>'required',
+            'A_LName'=>'required',
+            'A_BDate'=>'required',
+            'A_Country'=>'required'
+        ]);
+       
+            $authors=new author();
+            $authors->A_FName=$request->A_FName;
+            $authors->A_LName=$request->A_LName;
+            $authors->A_BDate=$request->A_BDate;
+            $authors->A_Country=$request->A_Country;
+            // $authors->save();
+            $data['Author_Id']=$authors->id;
+            $query=$authors->save();
+            if($query){
+                return redirect('/author')->with('success','you have created author');
+            }else{
+                return redirect('/author')->with('fail','Something went wrong');
+            }
     }
 
     /**
